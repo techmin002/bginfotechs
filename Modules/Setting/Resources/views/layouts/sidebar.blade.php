@@ -167,17 +167,18 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="{{ route('expensescategories.index') }}" class="nav-link {{ request()->routeIs('expensescategories.index') ? 'active' : '' }}">
+                  {{-- <i class="far fa-circle nav-icon"></i> --}}
+                  <p>Types</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{ route('expenses.index') }}" class="nav-link {{ request()->routeIs('expenses.index') ? 'active' : '' }}">
                   {{-- <i class="far fa-circle nav-icon"></i> --}}
                   <p>Expenses</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{ route('expenses.create') }}" class="nav-link {{ request()->routeIs('expenses.create') ? 'active' : '' }}">
-                  {{-- <i class="far fa-circle nav-icon"></i> --}}
-                  <p>Create expenses</p>
-                </a>
-              </li>
+              
             </ul>
           </li>
           @endcan

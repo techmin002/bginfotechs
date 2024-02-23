@@ -5,6 +5,7 @@ namespace Modules\Expenses\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Expenses\Entities\ExpenseCategory;
 use Modules\Expenses\Entities\Expenses;
 use Yajra\DataTables\DataTables;
 
@@ -17,8 +18,8 @@ class ExpensesController extends Controller
     public function index()
     {
         $expenses = Expenses::orderBy('created_at','DESC')->get();
-
-        return view('expenses::expenses.index', compact('expenses'));
+        $types = ExpenseCategory::all();
+        return view('expenses::expenses.index', compact('expenses','types'));
     }
   
     /**
@@ -37,18 +38,28 @@ class ExpensesController extends Controller
      */
     public function store(Request $request)
     {
-        // $file = $request->file('files');
-        // $fileName = time().''.$file->getClientOriginalName();
-        // $filePath = $file->storeAs('images', $fileName,'public');
+        
+        
         
         $expense = new Expenses;
-        $expense->expense_category_id = $request->expense_type;
+        $expense->expense_category_id = $request->expense_category_id;
+        $expense->title = $request->title;
+        $expense->amount_from = $request->amount_from;
+        $expense->paid_by = $request->paid_by;
+        $expense->title = $request->title;
         $expense->title = $request->title;
         $expense->amount = $request->amount;
         $expense->date = $request->date;
         $expense->mode = $request->mode;
         $expense->vendor = $request->vendor;
-        $expense->status = '1';
+        if($request->file('receipt'))
+        {
+            $file = $request->file('receipt');
+        $fileName = time().''.$file->getClientOriginalName();
+        $request->receipt->move(public_path('upload/images/expenses'), $fileName);
+        $expense->receipt = $fileName;
+
+        }
         $expense->save();
         return back()->with('success','Expenses Added Successfully');
     }
@@ -91,7 +102,9 @@ class ExpensesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $expense = Expenses::findOrfail($id);
+        $expense->delete();
+        return back()->with('success','Expenses Deleted');
     }
     public function getExpense(Request $request)
     {

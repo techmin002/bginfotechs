@@ -14,14 +14,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="frontend/images/fav.svg" />
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="frontend/css/font-awesome-pro.min.css" />
-    <link rel="stylesheet" href="frontend/css/flaticon_webency.css" />
-    <link rel="stylesheet" href="frontend/css/odometer.min.css" />
-    <link rel="stylesheet" href="frontend/css/sal.css" />
-    <link rel="stylesheet" href="frontend/css/magnific-popup.css" />
-    <link rel="stylesheet" href="frontend/css/swiper.min.css" />
-    <link rel="stylesheet" href="frontend/css/meanmenu.css" />
-    <link rel="stylesheet" href="frontend/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome-pro.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/flaticon_webency.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/odometer.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/sal.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/swiper.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/meanmenu.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/main.css')}}" />
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>

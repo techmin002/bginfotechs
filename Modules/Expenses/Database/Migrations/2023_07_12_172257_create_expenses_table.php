@@ -16,12 +16,15 @@ return new class extends Migration
         Schema::create('expenses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('expense_category_id');
-            $table->string('vendor');
+            $table->string('vendor')->nullable();
             $table->string('title');
             $table->string('amount');
             $table->date('date');
             $table->string('mode');
-            $table->string('status');
+            $table->string('amount_from');
+            $table->integer('status')->default(1);
+            $table->string('paid_by')->nullable();
+            $table->string('receipt')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

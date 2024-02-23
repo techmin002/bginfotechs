@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\InquiryController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Modules\Service\Entities\ServiceCategory;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +27,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/aboutus', [FrontendController::class, 'aboutUs'])->name('aboutus');
+Route::get('/service/list', [FrontendController::class, 'services'])->name('services.list');
+Route::get('/service/{slug}', [FrontendController::class, 'serviceShow'])->name('service.show');
+
 Route::resource('inquires',InquiryController::class);

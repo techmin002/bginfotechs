@@ -46,6 +46,10 @@ class ServiceCategoryController extends Controller
 
             $request->icon->move(public_path('upload/images/category'), $imageName);
         }
+        if($request->icon_class)
+        {
+         $imageName = $request->icon_class;   
+        }
         if($request->image)
         {
             $image = time().'.'.$request->image->extension();
@@ -100,6 +104,12 @@ class ServiceCategoryController extends Controller
             $imageName = time().'.'.$request->icon->extension();
 
             $request->icon->move(public_path('upload/images/category'), $imageName);
+        }else{
+            $imageName = $category->icon;
+        }
+        if($request->icon_class)
+        {
+         $imageName = $request->icon_class;   
         }else{
             $imageName = $category->icon;
         }

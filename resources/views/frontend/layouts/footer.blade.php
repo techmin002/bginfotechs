@@ -8,7 +8,7 @@
                         <div class="footer-content-info">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="frontend/images/logo/footer-logo.png" alt="Logo" />
+                                    <img src="{{ asset('frontend/images/logo/footer-logo.png') }}" alt="Logo" />
                                 </a>
                             </div>
                             <p>
@@ -143,16 +143,16 @@
     </div>
     <div class="footer-section-shape">
         <div class="footer-bg-shape">
-            <img src="frontend/images/banner-bg/footer-bg-shape.svg" alt="Shape" />
+            <img src="{{ asset('frontend/images/banner-bg/footer-bg-shape.svg')}}" alt="Shape" />
         </div>
         <div class="footer-bg-shape1">
-            <img src="frontend/images/banner-bg/footer-bg-shape1.svg" alt="Shape" />
+            <img src="{{ asset('frontend/images/banner-bg/footer-bg-shape1.svg')}}" alt="Shape" />
         </div>
         <div class="footer-bg-shape2 shake-y">
-            <img src="frontend/images/shape/shape-35.svg" alt="Shape" />
+            <img src="{{ asset('frontend/images/shape/shape-35.svg')}}" alt="Shape" />
         </div>
         <div class="footer-bg-shape3 pulse">
-            <img src="frontend/images/shape/shape-36.svg" alt="Shape" />
+            <img src="{{ asset('frontend/images/shape/shape-36.svg')}}" alt="Shape" />
         </div>
     </div>
 </footer>
@@ -178,19 +178,19 @@
 <!-- end: Scroll Area -->
 
 <!-- JS here -->
-<script src="frontend/js/jquery.min.js"></script>
-<script src="frontend/js/bootstrap.bundle.min.js"></script>
-<script src="frontend/js/meanmenu.js"></script>
-<script src="frontend/js/swiper.min.js"></script>
-<script src="frontend/js/jquery.appear.min.js"></script>
-<script src="frontend/js/sal.js"></script>
-<script src="frontend/js/odometer.min.js"></script>
-<script src="frontend/js/imagesloaded-pkgd.js"></script>
-<script src="frontend/js/magnific-popup.js"></script>
-<script src="frontend/js/isotope.pkgd.min.js"></script>
-<script src="frontend/js/validate.min.js"></script>
+<script src="{{ asset('frontend/js/jquery.min.js')}}"></script>
+<script src="{{ asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{ asset('frontend/js/meanmenu.js')}}"></script>
+<script src="{{ asset('frontend/js/swiper.min.js')}}"></script>
+<script src="{{ asset('frontend/js/jquery.appear.min.js')}}"></script>
+<script src="{{ asset('frontend/js/sal.js')}}"></script>
+<script src="{{ asset('frontend/js/odometer.min.js')}}"></script>
+<script src="{{ asset('frontend/js/imagesloaded-pkgd.js')}}"></script>
+<script src="{{ asset('frontend/js/magnific-popup.js')}}"></script>
+<script src="{{ asset('frontend/js/isotope.pkgd.min.js')}}"></script>
+<script src="{{ asset('frontend/js/validate.min.js')}}"></script>
 
-<script src="frontend/js/main.js"></script>
+<script src="{{ asset('frontend/js/main.js')}}"></script>
 </body>
 
 

@@ -49,12 +49,12 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="icon">icon </label>
+                                                <label for="icon">icon image</label>
 
                                                 <input type="file" id="file-ip-1" accept="image/*"
-                                                    class="form-control-file border" value="{{ old('icon') }}"
+                                                    class="form-control" value="{{ old('icon') }}"
                                                     onchange="showPreview2(event);" name="icon">
                                                 @error('icon')
                                                     <p style="color: red">{{ $message }}</p>
@@ -65,6 +65,18 @@
                                                 <div class="preview mt-2">
                                                     <img src="{{ asset('upload/images/category/'.$serviceCategory->icon) }}" width="200px">
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="icon">icon class</label>
+
+                                                <input type="text" id="file-ip-1" accept="image/*"
+                                                    class="form-control" value="{{ old('icon_class') }}" name="icon_class">
+                                                @error('icon')
+                                                    <p style="color: red">{{ $message }}</p>
+                                                @enderror
+                                                
                                             </div>
                                         </div>
                                         <div class="col-md-6">

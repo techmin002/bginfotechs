@@ -1,4 +1,7 @@
 <body>
+@php
+        $category=Modules\Service\Entities\ServiceCategory::all();
+@endphp
     <!-- start: Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
@@ -24,7 +27,7 @@
     <div class="tj-offcanvas-area d-lg-none">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="index.html"><img src="frontend/images/logo/white-logo.png" alt="Logo" /></a>
+                <a href="index.html"><img src="{{ asset('frontend/images/logo/white-logo.png') }}" alt="Logo" /></a>
             </div>
             <div class="offcanvas-icon">
                 <a id="canva_close" href="#">
@@ -89,32 +92,34 @@
                     <div class="header-content-area">
                         <div class="logo-area">
                             <div class="logo">
-                                <a href="index.html"><img src="frontend/images/logo/main-logo.png" alt="Logo" /></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('frontend/images/logo/main-logo.png') }}" alt="Logo" /></a>
                             </div>
                         </div>
                         <div class="tj-menu-area d-lg-block d-none" id="main-menu">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li class="has-dropdown">
-                                        <a href="index.html">Home</a>
-                                        <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="{{ url('/') }}">Home</a>
+                                        {{-- <ul class="sub-menu">
                                             <li class="active">
                                                 <a class="active" href="index.html">Home One</a>
                                             </li>
                                             <li><a href="index-2.html">Home Two</a></li>
                                             <li><a href="index-3.html">Home Three</a></li>
-                                        </ul>
+                                        </ul> --}}
                                     </li>
                                     <li>
-                                        <a href="about-us.html">About Us</a>
+                                        <a href="{{ route('aboutus') }}">About Us</a>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="service.html">Services</a>
+                                        <a href="{{ route('services.list') }}">Services</a>
                                         <ul class="sub-menu">
+                                            @foreach($category as $cat)
+                                           
                                             <li>
-                                                <a href="service.html">Services</a>
-                                            </li>
-                                            <li><a href="service-details.html">Services Details</a></li>
+                                            <a href="{{ route('service.show',$cat->slug) }}">{{ $cat->title }}</a>
+                                        </li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">

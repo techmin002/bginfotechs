@@ -48,19 +48,30 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="icon">icon </label>
+                                                <label for="icon">icon Image</label>
 
                                                 <input type="file" id="file-ip-1" accept="image/*"
-                                                    class="form-control-file border" value="{{ old('icon') }}"
-                                                    onchange="showPreview2(event);" required name="icon">
+                                                    class="form-control" value="{{ old('icon') }}"
+                                                    onchange="showPreview2(event);" name="icon">
                                                 @error('icon')
                                                     <p style="color: red">{{ $message }}</p>
                                                 @enderror
                                                 <div class="preview mt-2">
                                                     <img src="" id="file-ip-2-preview" width="200px">
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="icon">icon class</label>
+                                                <input type="text" id="file-ip-1" accept="image/*"
+                                                    class="form-control" value="{{ old('icon_class') }}" name="icon_class">
+                                                @error('icon')
+                                                    <p style="color: red">{{ $message }}</p>
+                                                @enderror
+                                               
                                             </div>
                                         </div>
                                         <div class="col-md-6">
