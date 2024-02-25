@@ -12,7 +12,7 @@
                             </div>
                             <div class="breadcrumb-link">
                                 <span>
-                                    <a href="index-2.html">
+                                    <a href="{{ url('/') }}">
                                         <span>Home</span>
                                     </a>
                                 </span>
