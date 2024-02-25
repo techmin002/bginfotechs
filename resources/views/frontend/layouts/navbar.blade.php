@@ -79,7 +79,7 @@
             </ul>
         </div>
         <div class="header-button">
-            <a class="btn tj-black-btn" href="contact.html">Contact Us</a>
+            <a class="btn tj-black-btn" href="{{ route('contact.index') }}">Contact Us</a>
         </div>
     </div>
     <!-- end: Mobile Menu -->
@@ -123,32 +123,25 @@
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="#">Pages</a>
+                                        <a href="#">Product</a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="portfolio.html">Portfolio</a>
+                                                <a href="portfolio.html">Hamrovet</a>
                                             </li>
-                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="team.html">Team</a></li>
+                                            <li><a href="portfolio-details.html">Smart School</a></li>
+                                            
                                         </ul>
                                     </li>
-                                    <li class="has-dropdown">
-                                        <a href="blog-grid.html">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="blog-grid.html">Blog Grid</a>
-                                            </li>
-                                            <li><a href="blog-standard.html">Blog Standard</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
+                                    <li class="">
+                                        <a href="{{ route('blog.list') }}">Blog</a>
+                                        
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{{ route('contact.index') }}">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="header-button d-none d-lg-block">
-                            <a href="contact.html" class="tj-secondary-btn btn-border"><span>Contact Us</span></a>
+                            <a href="{{ route('contact.index') }}" class="tj-secondary-btn btn-border"><span>Contact Us</span></a>
                         </div>
                         <div class="tj-canva-icon d-lg-none">
                             <a class="canva_expander nav-menu-link menu-button" href="#">

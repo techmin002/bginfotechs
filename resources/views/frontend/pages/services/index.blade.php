@@ -86,7 +86,7 @@
                         <div class="tj-service-item text-center">
                             <div class="service-inner">
                                 <div class="service-icon">
-                                    <i class="flaticon-design"></i>
+                                    <i class="{{ $cat->icon }}"></i>
                                     <img class="image-1" src="{{ asset('frontend/images/shape/service-image.svg') }}"
                                         alt="Shape" />
                                     <img class="image-2" src="{{ asset('frontend/images/shape/service-image1.svg') }}"

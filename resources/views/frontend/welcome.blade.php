@@ -119,17 +119,12 @@
 							<h2 class="sec-title">Making Your Business More Unique</h2>
 							<div class="desc">
 								<p>
-									There are many variations of passages of Lorem Ipsum available, but the
-									majority have suffered alteration in some form, by injected humour, or
-									randomised words which don't look even slightly believable.
+                               At RotechInnovation Pvt Ltd, we specialize in providing comprehensive IT solutions and training services to empower businesses to thrive in the digital age.
+							    Our team is dedicated to delivering high-quality services tailored to your specific needs, ensuring that your business stands out in today's competitive market.
 								</p>
 								<p>
-									There are many variations of passages of Lorem Ipsum available, but the
-									majority have suffered alteration in some form,
-								</p>
-								<p>
-									by injected humour, or randomised words which don't look even slightly
-									believable.
+								We take a holistic approach to IT solutions, covering everything from web and mobile development to digital marketing and support.
+								 Our goal is to provide you with the tools and knowledge you need to succeed in the digital landscape.
 								</p>
 							</div>
 							<div class="about-button d-flex">
@@ -195,10 +190,9 @@
 						<h2 class="sec-title">Service We Provide</h2>
 						<div class="desc">
 							<p>
-								It has survived not only five centuries, but also the leap into electronic
-								typesetting, remaining essentially unchanged. It was popularised in the 1960s
-								with the release
-							</p>
+							 encapsulates the array of tailored solutions and expertise we offer to meet your unique needs.
+							 It highlights our commitment to delivering value and excellence in every service, 
+							 ensuring your satisfaction and success
 						</div>
 					</div>
 				</div>
@@ -215,11 +209,11 @@
 							</div>
 							<div class="service-content">
 								<h4 class="title-link">
-									<a href="service-details.html">Logo Design</a>
+									<a href="service-details.html">Support</a>
 								</h4>
 								<p>
-									look like readable English. Many desktop publishing packages and web page
-									editors now use Lorem Ipsum, and a search for
+								Support for IT solutions is critical for maintaining the efficiency and functionality of your technology infrastructure. 
+								IT support services can range from troubleshooting technical issues to providing strategic guidance for improving your systems. 
 								</p>
 							</div>
 						</div>
@@ -239,8 +233,9 @@
 									<a href="service-details.html">Web Design</a>
 								</h4>
 								<p>
-									look like readable English. Many desktop publishing packages and web page
-									editors now use Lorem Ipsum, and a search for
+								Website development is the process of creating and maintaining websites.
+								 It involves a combination of various skills and technologies to build and manage a website. 
+								 Here are the key components of website development:
 								</p>
 							</div>
 						</div>
@@ -261,8 +256,8 @@
 									<a href="service-details.html">Mobile Apps</a>
 								</h4>
 								<p>
-									look like readable English. Many desktop publishing packages and web page
-									editors now use Lorem Ipsum, and a search for
+								App development refers to the process of creating software applications designed to run on mobile devices such as smartphones and tablets.
+								 Mobile apps can be developed for various platforms, including iOS (Apple), Android (Google):
 								</p>
 							</div>
 						</div>
@@ -282,15 +277,15 @@
 									<a href="service-details.html">Digital Marketing</a>
 								</h4>
 								<p>
-									look like readable English. Many desktop publishing packages and web page
-									editors now use Lorem Ipsum, and a search for
+								It is the practice of promoting and advertising products or services using various online channels and digital technologies.
+								 It's a dynamic and ever-evolving field that leverages the internet and digital platforms to reach and engage with a target audience:
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="service-button text-center">
-					<a href="service-details.html" class="tj-secondary-btn btn-border"><span>View Details</span></a>
+					<a href="{{ route('services.list') }}" class="tj-secondary-btn btn-border"><span>View Details</span></a>
 				</div>
 			</div>
 		</div>
@@ -314,10 +309,190 @@
 	</section>
 	<!-- end: Service Area -->
 
-	@include('frontend.testimonial')
+	<!-- start: Testimonial Area -->
+	<section class="tj-testimonial-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="testimonial-top-area">
+						<div class="tj-sec-heading">
+							<span class="sub-title">Testimonials</span>
+							<h2 class="sec-title">What Our Customer Say About Us</h2>
+						</div>
+						<div class="testimonial-right-content">
+							<p>
+							"Working with Rotech Innovation Pvt Ltd  has been a game-changer for us. 
+							Their team's expertise and dedication have helped us achieve our goals and
+							 grow our business exponentially."
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container testimonial-slider">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="swiper tj-testimonial-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="testimonial-item">
+									<div class="testimonial-top-content">
+										<div class="testimonial-left-content">
+											<div class="auother-image">
+												<!-- <img src="frontend/images/testimonial/test-1.png" alt="Image" /> -->
+												<img src="frontend/images/testimonial/userlogo.png" alt="Image" />
+											</div>
+											<div class="auother-text">
+												<h4 class="title">Nabin Thapa</h4>
+												<span class="sub-title">Founder Classic Enterprise </span>
+											</div>
+										</div>
+										<div class="testimonial-right-content">
+											<div class="testimonial-rating">
+												<ul class="dot-style">
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-regular fa-star-half-stroke"></i></li>
+												</ul>
+											</div>
+											<div class="testimonial-quote">
+												<svg xmlns="http://www.w3.org/2000/svg" width="60" height="44"
+													viewBox="0 0 60 44" fill="none">
+													<g opacity="0.3">
+														<path
+															d="M0.573543 43.6491C0.382362 42.3418 0.238976 40.9878 0.143385 39.5872C0.0477951 38.1865 0 37.1594 0 36.5057C0 30.2495 1.14709 24.3201 3.44126 18.7175C5.73543 13.0215 8.55535 8.21259 11.901 4.29077L26.9565 7.65233C25.1403 11.6675 23.6586 16.1963 22.5116 21.2386C21.4601 26.281 20.9343 31.0899 20.9343 35.6653C20.9343 35.8521 20.9343 36.2723 20.9343 36.9259C20.9343 37.4862 20.9343 38.1865 20.9343 39.0269C21.0299 39.7739 21.0777 40.5676 21.0777 41.408C21.1733 42.2484 21.2689 42.9954 21.3645 43.6491H0.573543Z"
+															fill="#DCDEE7" />
+														<path
+															d="M59.4259 0.0126953C59.6171 1.31997 59.7605 2.67393 59.8561 4.07458C59.9517 5.47523 59.9995 6.50238 59.9995 7.15602C59.9995 13.4123 58.8524 19.3884 56.5582 25.0843C54.2641 30.687 51.4441 35.4492 48.0985 39.371L33.043 36.0094C34.8592 31.9942 36.293 27.4654 37.3445 22.4231C38.4916 17.3808 39.0652 12.5719 39.0652 7.9964C39.0652 7.80965 39.0652 7.43614 39.0652 6.87588C39.0652 6.22224 39.0174 5.52192 38.9218 4.77491C38.9218 3.93451 38.874 3.09412 38.7784 2.25373C38.7784 1.41334 38.7306 0.66633 38.635 0.0126953H59.4259Z"
+															fill="#DCDEE7" />
+													</g>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<h4 class="test-title">Customers Review</h4>
+									<p>"Choosing Rotech Innovation was the best decision we made. 
+									Their innovative solutions have helped us achieve our goals faster than we thought possible."
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="testimonial-item">
+									<div class="testimonial-top-content">
+										<div class="testimonial-left-content">
+											<div class="auother-image">
+												<img src="frontend/images/testimonial/userlogo.png" alt="Image" />
+											</div>
+											<div class="auother-text">
+												<h4 class="title">Roshan Khadka</h4>
+												<span class="sub-title">Founder Azentgo</span>
+											</div>
+										</div>
+										<div class="testimonial-right-content">
+											<div class="testimonial-rating">
+												<ul class="dot-style">
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-regular fa-star-half-stroke"></i></li>
+												</ul>
+											</div>
+											<div class="testimonial-quote">
+												<svg xmlns="http://www.w3.org/2000/svg" width="60" height="44"
+													viewBox="0 0 60 44" fill="none">
+													<g opacity="0.3">
+														<path
+															d="M0.573543 43.6491C0.382362 42.3418 0.238976 40.9878 0.143385 39.5872C0.0477951 38.1865 0 37.1594 0 36.5057C0 30.2495 1.14709 24.3201 3.44126 18.7175C5.73543 13.0215 8.55535 8.21259 11.901 4.29077L26.9565 7.65233C25.1403 11.6675 23.6586 16.1963 22.5116 21.2386C21.4601 26.281 20.9343 31.0899 20.9343 35.6653C20.9343 35.8521 20.9343 36.2723 20.9343 36.9259C20.9343 37.4862 20.9343 38.1865 20.9343 39.0269C21.0299 39.7739 21.0777 40.5676 21.0777 41.408C21.1733 42.2484 21.2689 42.9954 21.3645 43.6491H0.573543Z"
+															fill="#DCDEE7" />
+														<path
+															d="M59.4259 0.0126953C59.6171 1.31997 59.7605 2.67393 59.8561 4.07458C59.9517 5.47523 59.9995 6.50238 59.9995 7.15602C59.9995 13.4123 58.8524 19.3884 56.5582 25.0843C54.2641 30.687 51.4441 35.4492 48.0985 39.371L33.043 36.0094C34.8592 31.9942 36.293 27.4654 37.3445 22.4231C38.4916 17.3808 39.0652 12.5719 39.0652 7.9964C39.0652 7.80965 39.0652 7.43614 39.0652 6.87588C39.0652 6.22224 39.0174 5.52192 38.9218 4.77491C38.9218 3.93451 38.874 3.09412 38.7784 2.25373C38.7784 1.41334 38.7306 0.66633 38.635 0.0126953H59.4259Z"
+															fill="#DCDEE7" />
+													</g>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<h4 class="test-title">Customers Review</h4>
+									<p>
+									"I'm incredibly impressed with Rotech Innovation. Their team's dedication and expertise have made a significant impact on our business. 
+									I highly recommend them."
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="testimonial-item">
+									<div class="testimonial-top-content">
+										<div class="testimonial-left-content">
+											<div class="auother-image">
+												<!-- <img src="frontend/images/testimonial/test-3.png" alt="Image" /> -->
+												<img src="frontend/images/testimonial/userlogo.png" alt="Image" />
+											</div>
+											<div class="auother-text">
+												<h4 class="title">Suman Thapa</h4>
+												<span class="sub-title"> Founder Everest Classic</span>
+											</div>
+										</div>
+										<div class="testimonial-right-content">
+											<div class="testimonial-rating">
+												<ul class="dot-style">
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-solid fa-star"></i></li>
+													<li><i class="fa-regular fa-star-half-stroke"></i></li>
+												</ul>
+											</div>
+											<div class="testimonial-quote">
+												<svg xmlns="http://www.w3.org/2000/svg" width="60" height="44"
+													viewBox="0 0 60 44" fill="none">
+													<g opacity="0.3">
+														<path
+															d="M0.573543 43.6491C0.382362 42.3418 0.238976 40.9878 0.143385 39.5872C0.0477951 38.1865 0 37.1594 0 36.5057C0 30.2495 1.14709 24.3201 3.44126 18.7175C5.73543 13.0215 8.55535 8.21259 11.901 4.29077L26.9565 7.65233C25.1403 11.6675 23.6586 16.1963 22.5116 21.2386C21.4601 26.281 20.9343 31.0899 20.9343 35.6653C20.9343 35.8521 20.9343 36.2723 20.9343 36.9259C20.9343 37.4862 20.9343 38.1865 20.9343 39.0269C21.0299 39.7739 21.0777 40.5676 21.0777 41.408C21.1733 42.2484 21.2689 42.9954 21.3645 43.6491H0.573543Z"
+															fill="#DCDEE7" />
+														<path
+															d="M59.4259 0.0126953C59.6171 1.31997 59.7605 2.67393 59.8561 4.07458C59.9517 5.47523 59.9995 6.50238 59.9995 7.15602C59.9995 13.4123 58.8524 19.3884 56.5582 25.0843C54.2641 30.687 51.4441 35.4492 48.0985 39.371L33.043 36.0094C34.8592 31.9942 36.293 27.4654 37.3445 22.4231C38.4916 17.3808 39.0652 12.5719 39.0652 7.9964C39.0652 7.80965 39.0652 7.43614 39.0652 6.87588C39.0652 6.22224 39.0174 5.52192 38.9218 4.77491C38.9218 3.93451 38.874 3.09412 38.7784 2.25373C38.7784 1.41334 38.7306 0.66633 38.635 0.0126953H59.4259Z"
+															fill="#DCDEE7" />
+													</g>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<h4 class="test-title">Customers Review</h4>
+									<p>
+									"Partnering with Rotech Innovation has been a game-changer for us. 
+									They understand our needs and deliver results that speak for themselves."
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="testimonial-section-shape">
+			<div class="testmonial-shape1">
+				<img src="frontend/images/shape/shape-17.svg" alt="Shape" />
+			</div>
+			<div class="testmonial-shape2">
+				<img src="frontend/images/shape/shape-15.svg" alt="Shape" />
+			</div>
+			<div class="testmonial-shape3 pulse">
+				<img src="frontend/images/shape/shape-15.svg" alt="Shape" />
+			</div>
+			<div class="testmonial-shape4 pulse">
+				<img src="frontend/images/shape/shape-18.svg" alt="Shape" />
+			</div>
+		</div>
+	</section>
+	<!-- end: Testimonial Area -->
 
 	<!-- start: Team Area -->
-	<section class="tj-team-section">
+	{{-- <section class="tj-team-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -327,9 +502,9 @@
 						<h2 class="sec-title">Meet Our Team</h2>
 						<div class="desc">
 							<p>
-								It has survived not only five centuries, but also the leap into electronic
-								typesetting, remaining essentially unchanged. It was popularised in the 1960s
-								with the release
+							Meet the talented individuals who drive our software company's innovation.
+							 Discover the diverse skills and expertise that make our team exceptional.
+							  From creative developers to meticulous testers, each member plays a crucial role in our success.
 							</p>
 						</div>
 					</div>
@@ -340,23 +515,23 @@
 					data-sal-delay="100">
 					<div class="tj-team-item">
 						<div class="team-image">
-							<img src="frontend/images/team/team-1.jpg" alt="Team" />
+							<img src="frontend/images/team/sandesh.jpg" alt="Team" />
 						</div>
 						<div class="tj-team-content">
 							<div class="team-header">
-								<h5 class="title-link"><a href="#">Alex Deitarson</a></h5>
-								<span class="sub-title">UI/UX Designer</span>
+								<h5 class="title-link"><a href="#">Sandesh Bogati</a></h5>
+								<span class="sub-title">Software Engineer</span>
 							</div>
 							<div class="team-share">
 								<ul class="dot-style">
 									<li>
-										<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+										<a href="https://www.facebook.com/er.sandeshbogati420" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
 									</li>
 									<li>
-										<a href="#"><i class="fa-brands fa-twitter"></i></a>
+									<a href="https://www.linkedin.com/in/sandesh-bogati-71973a1a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
 									</li>
 									<li>
-										<a href="#"><i class="fa-brands fa-instagram"></i></a>
+										<a href="https://www.instagram.com/sandyuv_bogati" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 									</li>
 								</ul>
 							</div>
@@ -460,7 +635,7 @@
 				<img src="frontend/images/shape/shape-16.svg" alt="Team" />
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- end: Team Area -->
 
 	<!-- Start: Portfolio Area -->
@@ -733,16 +908,16 @@
 				<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
 					<div class="tj-blog-item">
 						<div class="blog-image">
-							<a href="blog-details.html"><img src="frontend/images/blog/blog-1.jpg" alt="Image" /></a>
+							<a href="{{ route('blog.details') }}"><img src="frontend/images/blog/blog-1.jpg" alt="Image" /></a>
 						</div>
 						<div class="blog-content-area">
 							<div class="blog-meta">
 								<span><i class="flaticon-calendar"></i>23 Oct, 2023</span>
 								<span><i class="flaticon-group"></i>By
-									<a href="blog-details.html"> Admin</a></span>
+									<a href="{{ route('blog.details') }}"> Admin</a></span>
 							</div>
 							<h4 class="title-link">
-								<a href="blog-details.html">Simple Proctives that will help you better every day</a>
+								<a href="{{ route('blog.details') }}">Simple Proctives that will help you better every day</a>
 							</h4>
 							<div class="desc">
 								<p>
@@ -751,7 +926,7 @@
 								</p>
 							</div>
 							<div class="tj-blog-button">
-								<a href="blog-details.html" class="tj-secondary-btn btn-border"><span>Read
+								<a href="{{ route('blog.details') }}" class="tj-secondary-btn btn-border"><span>Read
 										More</span></a>
 							</div>
 						</div>
@@ -760,16 +935,16 @@
 				<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
 					<div class="tj-blog-item">
 						<div class="blog-image">
-							<a href="blog-details.html"><img src="frontend/images/blog/blog-2.jpg" alt="Image" /></a>
+							<a href="{{ route('blog.details') }}"><img src="frontend/images/blog/blog-2.jpg" alt="Image" /></a>
 						</div>
 						<div class="blog-content-area">
 							<div class="blog-meta">
 								<span><i class="flaticon-calendar"></i>23 Oct, 2023</span>
 								<span><i class="flaticon-group"></i>By
-									<a href="blog-details.html"> Admin</a></span>
+									<a href="{{ route('blog.details') }}"> Admin</a></span>
 							</div>
 							<h4 class="title-link">
-								<a href="blog-details.html">Frigilla lectus honcus anteom mode vehicul</a>
+								<a href="{{ route('blog.details') }}">Frigilla lectus honcus anteom mode vehicul</a>
 							</h4>
 							<div class="desc">
 								<p>
@@ -778,7 +953,7 @@
 								</p>
 							</div>
 							<div class="tj-blog-button">
-								<a href="blog-details.html" class="tj-secondary-btn btn-border"><span>Read
+								<a href="{{ route('blog.details') }}" class="tj-secondary-btn btn-border"><span>Read
 										More</span></a>
 							</div>
 						</div>
@@ -787,16 +962,16 @@
 				<div class="col-lg-4 col-md-6" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
 					<div class="tj-blog-item">
 						<div class="blog-image">
-							<a href="blog-details.html"><img src="frontend/images/blog/blog-3.jpg" alt="Image" /></a>
+							<a href="{{ route('blog.details') }}"><img src="frontend/images/blog/blog-3.jpg" alt="Image" /></a>
 						</div>
 						<div class="blog-content-area">
 							<div class="blog-meta">
 								<span><i class="flaticon-calendar"></i>23 Oct, 2023</span>
 								<span><i class="flaticon-group"></i>By
-									<a href="blog-details.html">Admin</a></span>
+									<a href="{{ route('blog.details') }}">Admin</a></span>
 							</div>
 							<h4 class="title-link">
-								<a href="blog-details.html">Proin mauris risus turpis or nare felis aptent nisl</a>
+								<a href="{{ route('blog.details') }}">Proin mauris risus turpis or nare felis aptent nisl</a>
 							</h4>
 							<div class="desc">
 								<p>
@@ -805,7 +980,7 @@
 								</p>
 							</div>
 							<div class="tj-blog-button">
-								<a href="blog-details.html" class="tj-secondary-btn btn-border"><span>Read
+								<a href="{{ route('blog.details') }}" class="tj-secondary-btn btn-border"><span>Read
 										More</span></a>
 							</div>
 						</div>
@@ -824,7 +999,82 @@
 	</section>
 	<!-- end: Blog Area -->
 
-	@include('frontend.contact')
+	<!-- start: Contact Area -->
+	<section class="tj-contact-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="contact-form-area">
+						<div class="contact-left-content" data-sal="slide-right" data-sal-duration="1000"
+							data-sal-delay="300">
+							<div class="tj-sec-heading">
+								<span class="sub-title">Get In touch</span>
+								<h2 class="sec-title">Have any Project Plan In your Mind?</h2>
+								<div class="desc">
+									<p>
+									Do you have a project in mind that you're itching to bring to life? We'd love to hear about it!
+									 Whether it's a sleek website, a cutting-edge mobile app, or a bold marketing campaign, 
+									 we're here to turn your vision into reality. Get in touch with us today to explore the possibilities!
+									</p>
+								</div>
+							</div>
+							<div class="comntact-list">
+								<div class="contact-icon">
+									<img src="frontend/images/icon/phone.svg" alt="Icon" />
+								</div>
+								<div class="contact-header">
+									<span class="d-block">For urgent help</span>
+									<a href="tel:+0000123456789">+919867235350</a>
+								</div>
+							</div>
+							<div class="comntact-list">
+								<div class="contact-icon">
+									<img src="frontend/images/icon/mail.svg" alt="Icon" />
+								</div>
+								<div class="contact-header">
+									<span class="d-block">Mail us 24/7</span>
+									<a href="mailto:hello@gmail.com">rotechinnovation@gmail.com</a>
+								</div>
+							</div>
+						</div>
+						<form id="contact-form" class="contact-form-box" data-sal="slide-left"
+							data-sal-duration="1000" data-sal-delay="300">
+							<div class="form-input">
+								<label>Your Name</label>
+								<input type="text" class="form__input" name="conName" />
+							</div>
+							<div class="form-input">
+								<label>Email Address</label>
+								<input type="email" class="form__input" name="conEmail" />
+							</div>
+							<div class="form-textarea">
+								<label>How can help you?</label>
+								<textarea id="message" name="conMessage"></textarea>
+							</div>
+							<div class="tj-contact-button">
+								<button class="btn tj-primary-btn" type="submit">Submit Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contact-section-shape">
+			<div class="contact-bg-shape shake-y">
+				<img src="frontend/images/shape/shape-31.svg" alt="Shape" />
+			</div>
+			<div class="contact-bg-shape1 pulse">
+				<img src="frontend/images/shape/shape-32.svg" alt="Shape" />
+			</div>
+			<div class="contact-bg-shape2 pulse">
+				<img src="frontend/images/shape/shape-33.svg" alt="Shape" />
+			</div>
+			<div class="contact-bg-shape3 shake-y">
+				<img src="frontend/images/shape/shape-34.svg" alt="Shape" />
+			</div>
+		</div>
+	</section>
+	<!-- end: Contact Area -->
 
 	<!-- BEGIN: Contact Form Success Modal Message -->
 	<div class="modal" id="message_sent" tabindex="-1">

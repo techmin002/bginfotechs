@@ -1178,8 +1178,8 @@ START: Theme Hero CSS
 ----------------------------------------*/
 .tj-hero-section {
   position: relative;
-  padding-top: 125px;
-  padding-bottom: 0px;
+  padding-top: 210px;
+  padding-bottom: 90px;
   background-image: url(../images/banner-bg/banner.jpg);
   background-repeat: no-repeat;
   background-position: center;

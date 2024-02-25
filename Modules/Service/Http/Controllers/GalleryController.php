@@ -5,7 +5,7 @@ namespace Modules\Service\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Modules\Service\Entities\gallery;
+use Modules\Service\Entities\Gallery;
 
 class GalleryController extends Controller
 {

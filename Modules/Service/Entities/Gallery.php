@@ -5,7 +5,7 @@ namespace Modules\Service\Entities;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class gallery extends Model
+class Gallery extends Model
 {
     use HasFactory;
 
