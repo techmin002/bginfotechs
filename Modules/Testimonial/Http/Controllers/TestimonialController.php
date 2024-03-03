@@ -54,7 +54,7 @@ class TestimonialController extends Controller
             'name' => $request['name'],
             'message' => $request['message'],
             'status' => $request['status'],
-            'image' => $imageName
+            'image' => 'na'
         ]);
         
         return redirect()->route('testimonials.index')->with('success','Created Successfully');
@@ -105,7 +105,7 @@ class TestimonialController extends Controller
             'name' => $request['name'],
             'message' => $request['message'],
             'status' => $request['status'],
-            'image' => $imageName
+            'image' => 'NA'
         ]);
         
         return redirect()->route('testimonials.index')->with('success','Updated Successfully');

@@ -20,9 +20,7 @@ use Modules\Service\Entities\ServiceCategory;
 Route::get('/login', function () {
     return view('auth.login');
 });
-Route::get('/', function () {
-    return view('frontend.welcome');
-});
+Route::get('/', [FrontendController::class,'index']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -31,8 +29,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/aboutus', [FrontendController::class, 'aboutUs'])->name('aboutus');
 Route::get('/service/list', [FrontendController::class, 'services'])->name('services.list');
 Route::get('/blog/list', [FrontendController::class, 'blogs'])->name('blog.list');
-Route::get('/blog/details', [FrontendController::class, 'blogsDetails'])->name('blog.details');
+Route::get('/blog/details/{slug}', [FrontendController::class, 'blogsDetails'])->name('blog.details');
 Route::get('/contact', [FrontendController::class, 'contactUs'])->name('contact.index');
+Route::post('frontend/contact/store', [FrontendController::class, 'contactStore'])->name('frontend.contactus.store');
 
 Route::get('/service/{slug}', [FrontendController::class, 'serviceShow'])->name('service.show');
 

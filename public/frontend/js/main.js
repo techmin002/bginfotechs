@@ -283,7 +283,7 @@ Mobile Menu Js
 				// start ajax request
 				$.ajax({
 					type: "POST",
-					url: "assets/mail/contact-form.php",
+					url: "{{ route('frontend.contactus.store') }}",
 					data: $("#contact-form").serialize(),
 					cache: false,
 					success: function (data) {
@@ -295,6 +295,8 @@ Mobile Menu Js
 						}
 					},
 				});
+				
+				
 			},
 		});
 	}

@@ -17,7 +17,7 @@ class UpdateTestimonialRequest extends FormRequest
         return [
             'name' => ['required'],
             'message' => ['required'],
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            // 'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ];
     }
 

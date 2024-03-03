@@ -72,65 +72,86 @@
                             <h2 class="sec-title">Have any Project Plan In your Mind?</h2>
                             <div class="desc">
                                 <p>
-                                    All the Lorem Ipsum generators on the Internet tend to repeat predefined
-                                    chunks as necessary, making this the first true generator on the Internet.
-                                    It uses a dictionary of over 200 Latin words,
+                                    Do you have a project in mind that you're itching to bring to life? We'd love to
+                                    hear about it!
+                                    Whether it's a sleek website, a cutting-edge mobile app, or a bold marketing
+                                    campaign,
+                                    we're here to turn your vision into reality. Get in touch with us today to
+                                    explore the possibilities!
                                 </p>
                             </div>
                         </div>
                         <div class="comntact-list">
                             <div class="contact-icon">
-                                <img src="{{ asset('frontend/images/icon/phone.svg')}}" alt="Icon" />
+                                <img src="frontend/images/icon/phone.svg" alt="Icon" />
                             </div>
                             <div class="contact-header">
                                 <span class="d-block">For urgent help</span>
-                                <a href="tel:+0000123456789">+ 0000 123-456-789</a>
+                                <a href="tel:+0000123456789">+919867235350</a>
                             </div>
                         </div>
                         <div class="comntact-list">
                             <div class="contact-icon">
-                                <img src="{{ asset('frontend/images/icon/mail.svg')}}" alt="Icon" />
+                                <img src="frontend/images/icon/mail.svg" alt="Icon" />
                             </div>
                             <div class="contact-header">
                                 <span class="d-block">Mail us 24/7</span>
-                                <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+                                <a href="mailto:hello@gmail.com">rotechinnovation@gmail.com</a>
                             </div>
                         </div>
                     </div>
-                    <form id="contact-form" class="contact-form-box" data-sal="slide-left" data-sal-duration="1000"
-                        data-sal-delay="300">
+                    <form method="post" action="{{ route('frontend.contactus.store') }}" class="contact-form-box" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="300">
+                        @csrf
                         <div class="form-input">
                             <label>Your Name</label>
-                            <input type="text" class="form__input" name="conName" />
+                            <input type="text" class="form__input" required name="Name" />
                         </div>
                         <div class="form-input">
                             <label>Email Address</label>
-                            <input type="email" class="form__input" name="conEmail" />
+                            <input type="email" class="form__input" required name="conEmail" />
+                        </div>
+                        <div class="form-input">
+                            <label>Contact Number</label>
+                            <input type="text" class="form__input" minlength="10" maxlength="13" required name="phone" />
+                        </div>
+                        @php
+                            $categories = Modules\Service\Entities\ServiceCategory::select('title', 'id')->get();
+                        @endphp
+                        <div class="form-input">
+                            <label for="service">Services</label>
+                            <select required name="service" id="service" class="form-control">
+                                <option value="" selected disabled>Select Service</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                @endforeach
+                                <option value="0">Others</option>
+                            </select>
                         </div>
                         <div class="form-textarea">
-                            <label>How can help you?</label>
-                            <textarea id="message" name="conMessage"></textarea>
+                            <label>How can we help you?</label>
+                            <textarea id="message" required name="conMessage"></textarea>
                         </div>
                         <div class="tj-contact-button">
                             <button class="btn tj-primary-btn" type="submit">Submit Now</button>
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
     </div>
     <div class="contact-section-shape">
         <div class="contact-bg-shape shake-y">
-            <img src="{{ asset('frontend/images/shape/shape-31.svg')}}" alt="Shape" />
+            <img src="frontend/images/shape/shape-31.svg" alt="Shape" />
         </div>
         <div class="contact-bg-shape1 pulse">
-            <img src="{{ asset('frontend/images/shape/shape-32.svg')}}" alt="Shape" />
+            <img src="frontend/images/shape/shape-32.svg" alt="Shape" />
         </div>
         <div class="contact-bg-shape2 pulse">
-            <img src="{{ asset('frontend/images/shape/shape-33.svg')}}" alt="Shape" />
+            <img src="frontend/images/shape/shape-33.svg" alt="Shape" />
         </div>
         <div class="contact-bg-shape3 shake-y">
-            <img src="{{ asset('frontend/images/shape/shape-34.svg')}}" alt="Shape" />
+            <img src="frontend/images/shape/shape-34.svg" alt="Shape" />
         </div>
     </div>
 </section>

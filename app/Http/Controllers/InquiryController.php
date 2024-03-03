@@ -12,7 +12,7 @@ class InquiryController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::orderBy('created_at','DESC')->with('service')->get();
         return view('backend.pages.contact',compact('contacts'));
     }
 

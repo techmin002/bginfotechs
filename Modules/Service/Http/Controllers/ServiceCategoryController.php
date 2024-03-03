@@ -151,4 +151,19 @@ class ServiceCategoryController extends Controller
         $category->delete();
         return back()->with('success','Service Catgory Deleted successfully');
     }
+    public function status($id)
+    {
+        $category = ServiceCategory::findOrfail($id);
+        if($category->status === 'on')
+        {
+            $status = 'off';
+        }else{
+            $status = 'on';
+        }
+        $category->update([
+            'status'=> $status
+        ]);
+        return back()->with('success','Service Catgory Updated successfully');
+
+    }
 }

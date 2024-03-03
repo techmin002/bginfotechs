@@ -27,7 +27,7 @@
     <div class="tj-offcanvas-area d-lg-none">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="index.html"><img src="{{ asset('frontend/images/logo/white-logo.png') }}" alt="Logo" /></a>
+                <a href="index.html"><img src="{{ asset('frontend/images/bglogo.png') }}" alt="Logo" /></a>
             </div>
             <div class="offcanvas-icon">
                 <a id="canva_close" href="#">
@@ -92,7 +92,7 @@
                     <div class="header-content-area">
                         <div class="logo-area">
                             <div class="logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('frontend/images/logo/main-logo.png') }}" alt="Logo" /></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('frontend/images/bglogo.png') }}" alt="Logo" /></a>
                             </div>
                         </div>
                         <div class="tj-menu-area d-lg-block d-none" id="main-menu">

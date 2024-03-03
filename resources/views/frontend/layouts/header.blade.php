@@ -7,11 +7,11 @@
     <meta name="description" content="" />
 
     <!-- Site Title -->
-    <title>Webency - Web Design Agency HTML5 Template</title>
+    <title>BG INFOTECHS - Your IT Partner</title>
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="frontend/images/fav.svg" />
-    <link rel="shortcut icon" type="image/x-icon" href="frontend/images/fav.svg" />
+    <link rel="apple-touch-icon" href="{{ asset('frontend/images/bglogo.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/images/bglogo.png') }}" />
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css')}}" />

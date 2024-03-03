@@ -9,7 +9,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb-content-area">
                         <div class="breadcrumb-heading">
-                            <h1 class="breadcrumb-title">Blog Details</h1>
+                            <h1 class="breadcrumb-title">{{ $blog->title }}</h1>
                         </div>
                         <div class="breadcrumb-link">
                             <span>
@@ -19,7 +19,7 @@
                             </span>
                             <i class="fa-light fa-angle-right"></i>
                             <span>
-                                <span>Blog Details</span>
+                                <span>{{ $blog->title }}</span>
                             </span>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                             <span><i class="fa-regular fa-comments"></i>Comments</span>
                         </div>
                         <div class="details-title">
-                            <h3 class="title">Simple Proctives that will help you get better every day</h3>
+                            <h3 class="title">{{ $blog->title }}</h3>
                         </div>
                         <p>
                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
@@ -280,36 +280,13 @@
                             <h3 class="side-title">Categories</h3>
                             <div class="sidebar-catagory">
                                 <ul>
+                                    @foreach ($categories as $category)
                                     <li>
-                                        <a href="#">Business Consulting
+                                        <a href="{{ route('service.show',$category->slug) }}">{{ ucfirst($category->title) }}
                                             <span> <i class="fa-light fa-angle-right"></i></span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">Marketing
-                                            <span> <i class="fa-light fa-angle-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">SEO Optimization
-                                            <span> <i class="fa-light fa-angle-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Designing
-                                            <span> <i class="fa-light fa-angle-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Facebook Marketing
-                                            <span> <i class="fa-light fa-angle-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Web Development
-                                            <span> <i class="fa-light fa-angle-right"></i></span>
-                                        </a>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

@@ -330,80 +330,156 @@
     <!-- end: Testimonial Area -->
 
     <!-- start: Contact Area -->
-    <section class="tj-contact-section">
+      <!-- start: Team Area -->
+      <section class="tj-team-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="contact-form-area">
-                        <div class="contact-left-content" data-sal="slide-right" data-sal-duration="1000"
-                            data-sal-delay="300">
-                            <div class="tj-sec-heading">
-                                <span class="sub-title">Get In touch</span>
-                                <h2 class="sec-title">Have any Project Plan In your Mind?</h2>
-                                <div class="desc">
-                                    <p>
-                                        All the Lorem Ipsum generators on the Internet tend to repeat predefined
-                                        chunks as necessary, making this the first true generator on the
-                                        Internet. It uses a dictionary of over 200 Latin words,
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="comntact-list">
-                                <div class="contact-icon">
-                                    <img src="{{ asset('frontend/images/icon/phone.svg')}}" alt="Icon" />
-                                </div>
-                                <div class="contact-header">
-                                    <span class="d-block">For urgent help</span>
-                                    <a href="tel:+0000123456789">+ 0000 123-456-789</a>
-                                </div>
-                            </div>
-                            <div class="comntact-list">
-                                <div class="contact-icon">
-                                    <img src="{{ asset('frontend/images/icon/mail.svg')}}" alt="Icon" />
-                                </div>
-                                <div class="contact-header">
-                                    <span class="d-block">Mail us 24/7</span>
-                                    <a href="mailto:hello@gmail.com">hello@gmail.com</a>
-                                </div>
-                            </div>
+                    <div class="tj-sec-heading text-center" data-sal="slide-up" data-sal-duration="1000"
+                        data-sal-delay="600">
+                        <span class="sub-title">How We Work</span>
+                        <h2 class="sec-title">Meet Our Team</h2>
+                        <div class="desc">
+                            <p>
+                                Meet the talented individuals who drive our software company's innovation.
+                                Discover the diverse skills and expertise that make our team exceptional.
+                                From creative developers to meticulous testers, each member plays a crucial role in our
+                                success.
+                            </p>
                         </div>
-                        <form id="contact-form" class="contact-form-box" data-sal="slide-left"
-                            data-sal-duration="1000" data-sal-delay="300">
-                            <div class="form-input">
-                                <label>Your Name</label>
-                                <input type="text" class="form__input" name="conName" />
-                            </div>
-                            <div class="form-input">
-                                <label>Email Address</label>
-                                <input type="email" class="form__input" name="conEmail" />
-                            </div>
-                            <div class="form-textarea">
-                                <label>How can help you?</label>
-                                <textarea id="message" name="conMessage"></textarea>
-                            </div>
-                            <div class="tj-contact-button">
-                                <button class="btn tj-primary-btn" type="submit">Submit Now</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-sal="slide-up" data-sal-duration="1000"
+                    data-sal-delay="100">
+                    <div class="tj-team-item">
+                        <div class="team-image">
+                            <img src="frontend/images/team/sandesh.jpg" alt="Team" />
+                        </div>
+                        <div class="tj-team-content">
+                            <div class="team-header">
+                                <h5 class="title-link"><a href="#">Sandesh Bogati</a></h5>
+                                <span class="sub-title">Software Engineer</span>
+                            </div>
+                            <div class="team-share">
+                                <ul class="dot-style">
+                                    <li>
+                                        <a href="https://www.facebook.com/er.sandeshbogati420" target="_blank"><i
+                                                class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/sandesh-bogati-71973a1a6/"
+                                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/sandyuv_bogati" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-sal="slide-up" data-sal-duration="1000"
+                    data-sal-delay="200">
+                    <div class="tj-team-item">
+                        <div class="team-image">
+                            <img src="frontend/images/team/team-2.jpg" alt="Team" />
+                        </div>
+                        <div class="tj-team-content">
+                            <div class="team-header">
+                                <h5 class="title-link"><a href="#">Alex Deitarson</a></h5>
+                                <span class="sub-title">UI/UX Designer</span>
+                            </div>
+                            <div class="team-share">
+                                <ul class="dot-style">
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-sal="slide-up" data-sal-duration="1000"
+                    data-sal-delay="300">
+                    <div class="tj-team-item">
+                        <div class="team-image">
+                            <img src="frontend/images/team/team-3.jpg" alt="Team" />
+                        </div>
+                        <div class="tj-team-content">
+                            <div class="team-header">
+                                <h5 class="title-link"><a href="#">Alex Deitarson</a></h5>
+                                <span class="sub-title">UI/UX Designer</span>
+                            </div>
+                            <div class="team-share">
+                                <ul class="dot-style">
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" data-sal="slide-up" data-sal-duration="1000"
+                    data-sal-delay="400">
+                    <div class="tj-team-item">
+                        <div class="team-image">
+                            <img src="frontend/images/team/team-4.jpg" alt="Team" />
+                        </div>
+                        <div class="tj-team-content">
+                            <div class="team-header">
+                                <h5 class="title-link"><a href="#">Alex Deitarson</a></h5>
+                                <span class="sub-title">UI/UX Designer</span>
+                            </div>
+                            <div class="team-share">
+                                <ul class="dot-style">
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-button text-center">
+                    <a href="contact.html" class="tj-secondary-btn btn-border"><span>View More</span></a>
+                </div>
+            </div>
         </div>
-        <div class="contact-section-shape">
-            <div class="contact-bg-shape shake-y">
-                <img src="{{ asset('frontend/images/shape/shape-31.svg')}}" alt="Shape" />
+        <div class="team-section-shape">
+            <div class="team-bg-shape">
+                <img src="frontend/images/shape/team-shape1.svg" alt="Team" />
             </div>
-            <div class="contact-bg-shape1 pulse">
-                <img src="{{ asset('frontend/images/shape/shape-32.svg')}}" alt="Shape" />
+            <div class="team-bg-shape1">
+                <img src="frontend/images/shape/team-shape2.svg" alt="Team" />
             </div>
-            <div class="contact-bg-shape2 pulse">
-                <img src="{{ asset('frontend/images/shape/shape-33.svg')}}" alt="Shape" />
-            </div>
-            <div class="contact-bg-shape3 shake-y">
-                <img src="{{ asset('frontend/images/shape/shape-34.svg')}}" alt="Shape" />
+            <div class="team-bg-shape2 pulse">
+                <img src="frontend/images/shape/shape-16.svg" alt="Team" />
             </div>
         </div>
     </section>
+    <!-- end: Team Area -->
     <!-- end: Contact Area -->
 
 

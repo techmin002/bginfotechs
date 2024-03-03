@@ -60,7 +60,7 @@
                             <td class="text-center">{{ $value->contact }} </td>
                             <td class="text-center">{{ $value->email }} </td>
                             <td class="text-center">
-                                {{ $value->service_id }}
+                                {{ $value->service->title ?? 'N/A' }}
                             </td>
                             <td class="text-center">
                                 {!! $value->message !!}
