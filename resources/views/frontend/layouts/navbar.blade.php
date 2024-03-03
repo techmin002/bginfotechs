@@ -92,7 +92,7 @@
                     <div class="header-content-area">
                         <div class="logo-area">
                             <div class="logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('frontend/images/bglogo.png') }}" alt="Logo" /></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('frontend/images/logo/logo.png') }}" alt="Logo" /></a>
                             </div>
                         </div>
                         <div class="tj-menu-area d-lg-block d-none" id="main-menu">
