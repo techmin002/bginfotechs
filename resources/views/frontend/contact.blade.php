@@ -83,20 +83,20 @@
                         </div>
                         <div class="comntact-list">
                             <div class="contact-icon">
-                                <img src="frontend/images/icon/phone.svg" alt="Icon" />
+                                <img src="{{asset('frontend/images/icon/phone.svg')}}" alt="Icon" />
                             </div>
                             <div class="contact-header">
                                 <span class="d-block">For urgent help</span>
-                                <a href="tel:+0000123456789">+919867235350</a>
+                                <a href="tel:+0000123456789">+9779842251119</a>
                             </div>
                         </div>
                         <div class="comntact-list">
                             <div class="contact-icon">
-                                <img src="frontend/images/icon/mail.svg" alt="Icon" />
+                                <img src="{{asset('frontend/images/icon/mail.svg')}}" alt="Icon" />
                             </div>
                             <div class="contact-header">
                                 <span class="d-block">Mail us 24/7</span>
-                                <a href="mailto:hello@gmail.com">rotechinnovation@gmail.com</a>
+                                <a href="mailto:hello@gmail.com">rinfo@bginfotechs.com</a>
                             </div>
                         </div>
                     </div>

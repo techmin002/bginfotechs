@@ -12,8 +12,9 @@
                                 </a>
                             </div>
                             <p>
-                                The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                                of letters, as opposed to using 'Content here.
+                                At BG INFOTECHS, we specialize in crafting cutting-edge IT solutions tailored to meet the evolving
+                                 needs of businesses. With a commitment to innovation and excellence, we empower organizations 
+                                 to thrive in the digital age.
                             </p>
                             <div class="footer-share">
                                 <ul class="dot-style">
@@ -59,7 +60,7 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="footer-widget footer1-col-3">
-                        <h4 class="footer_title">Useful Link</h4>
+                        <h4 class="footer_title">Services</h4>
                         <div class="widget_nav_menu">
                             <div class="footer-menu">
                                 <ul>
@@ -78,9 +79,9 @@
                         <div class="widget_nav_menu">
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{ route('aboutus') }}">About us</a></li>
+                                    <li><a href="{{ route('services.list') }}">Services</a></li>
+                                    <li><a href="{{ route('contact.index') }}">Contact Us</a></li>
                                     <li><a href="#">Out Team</a></li>
                                     <li><a href="#">Pricing</a></li>
                                 </ul>
@@ -96,19 +97,19 @@
                                 <ul>
                                     <li>
                                         <span><i class="fa-sharp fa-regular fa-envelope"></i></span>
-                                        <a href="mailto:Info@gmail.com">Info@gmail.com</a>
+                                        <a href="mailto:Info@gmail.com">Info@bginfotechs.com</a>
                                     </li>
                                     <li>
                                         <span><i class="fa-solid fa-globe"></i></span><a
-                                            href="#">www.website.com</a>
+                                            href="#">www.bginfotechs.com</a>
                                     </li>
                                     <li>
                                         <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
-                                        <a href="#">225 Marion Street, Columbia</a>
+                                        <a href="#">Dhangadhi, Kailali, Nepal</a>
                                     </li>
                                     <li>
                                         <span><i class="fa-solid fa-phone-volume"></i></span>
-                                        <a href="tel:+00123456789">+ 00 123 456 789</a>
+                                        <a href="tel:+977 984 225 111">+ 977 984 225 1119</a>
                                     </li>
                                 </ul>
                             </div>
@@ -133,7 +134,7 @@
                             <ul>
                                 <li><a href="#">Setting & Privacy</a></li>
                                 <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Support</a></li>
+                                <li><a href="{{ route('contact.index') }}">Support</a></li>
                             </ul>
                         </div>
                     </div>

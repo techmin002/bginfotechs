@@ -8,6 +8,7 @@ use Modules\Blog\Entities\Blog;
 use Modules\Faq\Entities\Faq;
 use Modules\Service\Entities\Service;
 use Modules\Service\Entities\ServiceCategory;
+use Modules\Team\Entities\Team;
 use Modules\Testimonial\Entities\Testimonial;
 
 class FrontendController extends Controller
@@ -16,13 +17,14 @@ class FrontendController extends Controller
     {
         $data['blogs'] = Blog::all();
         $data['faqs'] = Faq::all();
-        $data['testimonials'] = Testimonial::all();
+        
         $data['categories'] = ServiceCategory::where('status','on')->get();
         return view('frontend.welcome', compact('data'));
     }
     public function aboutUs()
     {
-        return view('frontend.pages.about');
+        $teams = Team::where('status','on')->get();
+        return view('frontend.pages.about',compact('teams'));
     }
     public function services()
     {
