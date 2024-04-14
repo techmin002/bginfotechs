@@ -419,19 +419,16 @@
                     <div class="col-lg-6" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="100">
                         <div class="tj-faq-area">
                             <div class="accordion tj-faq-style" id="accordionExample">
-                                @foreach ($data['faqs'] as $faq)
-                                    
-                                
+                                @foreach ($data['faqs'] as $key => $faq)
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
+                                    <h2 class="accordion-header" id="heading{{$key}}">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                           {{$faq->question}}
+                                            data-bs-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapse{{$key}}">
+                                            {{$faq->question}}
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapse{{$key}}" class="accordion-collapse collapse" aria-labelledby="heading{{$key}}"
+                                        data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <strong>{!! $faq->answer !!}</strong>
                                         </div>
@@ -444,6 +441,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="faq-section-shape">
