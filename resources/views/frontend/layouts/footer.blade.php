@@ -11,7 +11,7 @@
                                     <img src="{{ asset('frontend/images/logo/new_logo.png') }}" alt="Logo" />
                                 </a>
                             </div>
-                            <p>
+                            <p class="">
                                 At BG INFOTECHS, we specialize in crafting cutting-edge IT solutions tailored to meet the evolving
                                  needs of businesses. With a commitment to innovation and excellence, we empower organizations 
                                  to thrive in the digital age.
