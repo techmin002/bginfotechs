@@ -49,6 +49,7 @@
                       <th class="text-center">Email</th>
                       <th class="text-center">service</th>
                       <th class="text-center">Message</th>
+                      <th class="text-center">Date</th>
                       <th class="text-center">Action</th>
                     </tr>
                     </thead>
@@ -64,6 +65,8 @@
                             </td>
                             <td class="text-center">
                                 {!! $value->message !!}
+                            </td>
+                            <td class="text-center">{{ $value->created_at->format('F j, Y, g:i a') }}
                             </td>
                             <td class="text-center">
                                 <button id="delete" class="btn btn-danger btn-sm" onclick="
