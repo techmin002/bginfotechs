@@ -12150,7 +12150,7 @@ START: Theme Mainmenu CSS
   width: 485px;
   z-index: 9999;
   background: -webkit-gradient(linear, left top, right top, from(var(--tj-color-theme-secondary)), to(var(--tj-color-theme-primary)));
-  background: linear-gradient(90deg, var(--tj-color-theme-secondary) 0%, var(--tj-color-theme-primary) 100%);
+  background: linear-gradient(90deg, #000000 0%, var(--tj-color-theme-primary) 100%);
   padding: 30px 15px 30px;
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);

@@ -27,7 +27,7 @@
     <div class="tj-offcanvas-area d-lg-none">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="index.html"><img src="{{ asset('frontend/images/bglogo.png') }}" alt="Logo" /></a>
+                <a href="index.html"><img src="{{ asset('frontend/images/logo/new_logo.png') }}" alt="Logo" /></a>
             </div>
             <div class="offcanvas-icon">
                 <a id="canva_close" href="#">
