@@ -51,11 +51,11 @@
                     </li>
                     <li>
                         <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
-                        <a href="#">225 Marion Street, Columbia</a>
+                        <a href="#">Taranagar 5 Dhangadhi</a>
                     </li>
                     <li>
                         <span><i class="fa-solid fa-phone-volume"></i></span>
-                        <a href="tel:+00123456789">+977 9842251119</a>
+                        <a href="tel:+00123456789">091-590935</a>
                     </li>
                 </ul>
             </div>

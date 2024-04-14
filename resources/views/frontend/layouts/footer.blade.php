@@ -195,7 +195,4 @@
 
 <script src="{{ asset('frontend/js/main.js')}}"></script>
 </body>
-
-
-<!-- Mirrored from themejunction.net/html/webency/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Feb 2024 06:39:51 GMT -->
 </html>
