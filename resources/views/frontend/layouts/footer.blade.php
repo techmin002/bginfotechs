@@ -31,11 +31,11 @@
                                             </svg>
                                         </a>
                                     </li>
+                                  <li>
+                                   <a href="https://wa.me/%2B9779767692420" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                                   </li>
                                     <li>
-                                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="https://www.facebook.com/profile.php?id=100093335074171"><i class="fa-brands fa-facebook-f"></i></a>
                                     </li>
                                 </ul>
                             </div>

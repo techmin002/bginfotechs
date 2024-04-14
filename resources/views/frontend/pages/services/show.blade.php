@@ -95,12 +95,6 @@
                                     </div>
                                 </div>
                                 @endforeach
-                                <p>
-                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                                    officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                                </p>
                             </div>
                             <div class="blog-video-area">
                                 <div class="row video-box align-items-center">
@@ -108,7 +102,7 @@
                                         <div class="video-image">
                                             <img src="{{ asset('frontend/images/blog/blog-8.jpg') }}" alt="Image">
                                             <div class="video-play">
-                                                <a class="venobox popup-videos-button" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=ADmQTw4qqTY">
+                                                <a class="venobox popup-videos-button" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=htmAUvEJ5H4">
                                                     <i class="fa-sharp fa-solid fa-play"></i>
                                                 </a>
                                             </div>
@@ -139,66 +133,6 @@
                                 </div>
                                 {!! $data['category']->description !!}
                             </div>
-                            <div class="tj-faq-area">
-                                <div class="accordion tj-faq-style" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                What is a Meet With some form digital platform
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <strong>There are many variations of passages of Lorem Ipsum available,
-                                                    but the majority have suffered alteration in some form, by
-                                                    injected humour.</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                How Can A Digital Platform Helps Your Business Grow?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <strong>There are many variations of passages of Lorem Ipsum available,
-                                                    but the majority have suffered alteration in some form, by
-                                                    injected humour.</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                How Do I Book My Slot To Meet With Your Technical Team?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <strong>There are many variations of passages of Lorem Ipsum available,
-                                                    but the majority have suffered alteration in some form, by
-                                                    injected humour.</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingFour">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                How Many Projects Hove Your Completed So far?
-                                            </button>
-                                        </h2>
-                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <strong>There are many variations of passages of Lorem Ipsum available,
-                                                    but the majority have suffered alteration in some form, by
-                                                    injected humour.</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -207,8 +141,8 @@
                                 <h3 class="side-title">All Services</h3>
                                 <div class="sidebar-catagory">
                                     <ul class="dot-style">
-                                        <li>
-                                            <a href="#">Branding &amp; Art
+                                    <li>
+                                            <a href="#">Web Development
                                                 <span> <i class="fa-light fa-angle-right"></i></span>
                                             </a>
                                         </li>
@@ -223,20 +157,11 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">3D Animation
+                                            <a href="#">Branding &amp; Advertise
                                                 <span> <i class="fa-light fa-angle-right"></i></span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#">Branding &amp; Illustration
-                                                <span> <i class="fa-light fa-angle-right"></i></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Web Development
-                                                <span> <i class="fa-light fa-angle-right"></i></span>
-                                            </a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -246,7 +171,7 @@
                                         <img src="{{ asset('frontend/images/icon/phone3.svg') }}" alt="Icon">
                                     </div>
                                     <div class="contact-link">
-                                        <a href="tel:+9779805672203">+977 9805672203</a>
+                                        <a href="tel:+9779805672203">+977 091-590935</a>
                                     </div>
                                     <span>Sunday - Saturday: 10:00 am - 6:00pm 24/7 <br>
                                         Emergency Service</span>
@@ -284,9 +209,8 @@
                                     <h2 class="sec-title">Have any Project Plan In your Mind?</h2>
                                     <div class="desc">
                                         <p>
-                                            All the Lorem Ipsum generators on the Internet tend to repeat predefined
-                                            chunks as necessary, making this the first true generator on the
-                                            Internet. It uses a dictionary of over 200 Latin words,
+                                        Feel free to reach out to us to discuss further details and how BG Infotechs can assist you." 
+                                        This way, you're inviting them to contact you for more information while also asking about their project plans.
                                         </p>
                                     </div>
                                 </div>
@@ -296,7 +220,7 @@
                                     </div>
                                     <div class="contact-header">
                                         <span class="d-block">For urgent help</span>
-                                        <a href="tel:+0000123456789">+ 0000 123-456-789</a>
+                                        <a href="tel:+0000123456789">+977 91-590935</a>
                                     </div>
                                 </div>
                                 <div class="comntact-list">
@@ -305,7 +229,7 @@
                                     </div>
                                     <div class="contact-header">
                                         <span class="d-block">Mail us 24/7</span>
-                                        <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+                                        <a href="mailto:hello@gmail.com">info@bginfotechs</a>
                                     </div>
                                 </div>
                             </div>

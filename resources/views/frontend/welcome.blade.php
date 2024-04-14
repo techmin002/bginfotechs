@@ -430,7 +430,7 @@
                                            {{$faq->question}}
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                    <div id="collapseOne" class="accordion-collapse collapse"
                                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <strong>{!! $faq->answer !!}</strong>
@@ -537,7 +537,7 @@
                                     </div>
                                     <div class="contact-header">
                                         <span class="d-block">For urgent help</span>
-                                        <a href="tel:+0000123456789">+977 9805672203</a>
+                                        <a href="tel:+0000123456789">+977 091-590935</a>
                                     </div>
                                 </div>
                                 <div class="comntact-list">

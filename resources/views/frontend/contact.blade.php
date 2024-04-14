@@ -83,11 +83,11 @@
                         </div>
                         <div class="comntact-list">
                             <div class="contact-icon">
-                                <img src="{{asset('frontend/images/icon/phone.svg')}}" alt="Icon" />
+                                <img src="{{'frontend/images/icon/phone.svg'}}" alt="Icon" />
                             </div>
                             <div class="contact-header">
                                 <span class="d-block">For urgent help</span>
-                                <a href="tel:+0000123456789">+977 9805672203</a>
+                                <a href="tel:+0000123456789">+977 091-590935</a>
                             </div>
                         </div>
                         <div class="comntact-list">
