@@ -10,5 +10,6 @@
     "Vacancy": true,
     "Api": true,
     "Service": true,
-    "Expenses": true
+    "Expenses": true,
+    "Students": true
 }

@@ -72,9 +72,8 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('users.create') }}" class="nav-link {{ request()->routeIs('users.create') ? 'active' : '' }}">
-                  {{-- <i class="far fa-circle nav-icon"></i> --}}
-                  <p>Create Users</p>
+                <a href="{{ route('students.index') }}" class="nav-link {{ request()->routeIs('students.index') ? 'active' : '' }}">
+                  <p>Students</p>
                 </a>
               </li>
             </ul>

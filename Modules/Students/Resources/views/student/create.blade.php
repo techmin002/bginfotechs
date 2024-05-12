@@ -1,0 +1,188 @@
+@extends('setting::layouts.master')
+
+@section('title', 'Create Student')
+
+@section('breadcrumb')
+    <ol class="breadcrumb border-0 m-0">
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('students.index') }}">Student</a></li>
+        <li class="breadcrumb-item active">Create</li>
+    </ol>
+@endsection
+
+@section('content')
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid mb-4">
+                <form action="{{ route('students.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="row d-flex">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <a href="{{ route('students.index') }}" class="btn btn-success">Go Back <i class="bi bi-check"></i></a href="{{ route('students.index') }}">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group float-right">
+                                <button class="btn btn-primary">Save Changes <i class="bi bi-check"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="form-row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="name">Name <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" name="name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="email">Email <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="email" name="email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="password">Password <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="password" name="password" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="password_confirmation">Confirm Password <span
+                                                        class="text-danger">*</span></label>
+                                                <input class="form-control" type="password" name="password_confirmation"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="qualification">Qualification <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" name="qualification" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="address">Address <span
+                                                        class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" name="address"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="role">Role <span class="text-danger">*</span></label>
+                                        <select class="form-control" name="role" id="role" required>
+                                            <option value="7" selected>Student</option>
+                                            {{-- @foreach (\Spatie\Permission\Models\Role::where('name', '!=', 'Super Admin')->get() as $role) --}}
+                                                {{-- <option value="{{ $role->name }}">{{ $role->name }}</option> --}}
+                                            {{-- @endforeach --}}
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="status">Status <span class="text-danger">*</span></label>
+                                        <select class="form-control" name="status" id="status" required>
+                                            <option value="" selected disabled>Select Status</option>
+                                            <option value="on">Active</option>
+                                            <option value="off">Deactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="training">Trainigs <span class="text-danger">*</span></label>
+
+                                        <input type="text" id="file-ip-1"   
+                                            class="form-control-file border" value="{{ old('training') }}"
+                                            onchange="showPreview1(event);" name="training">
+                                        @error('training')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="total_fees">Total Fees <span class="text-danger">*</span></label>
+
+                                        <input type="number" min="0" name="total_fees" id="file-ip-1" class="form-control-file border" value="{{ old('total_fees') }}"
+                                            >
+                                        @error('total_fees')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="paid_fees">Paid Fees <span class="text-danger">*</span></label>
+
+                                        <input type="number" min="0"  id="file-ip-1" 
+                                            class="form-control-file border" value="{{ old('paid_fees') }}" name="paid_fees">
+                                        @error('paid_fees')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
+                                       
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="admission_date">Admission Date <span class="text-danger">*</span></label>
+
+                                        <input type="date" min="0"  id="file-ip-1" 
+                                            class="form-control-file border" value="{{ old('admission_date') }}" name="admission_date" max="{{ date('Y-m-d') }}">
+                                        @error('admission_date')    
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
+                                       
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="complete_date">Training End Date <span class="text-danger">*</span></label>
+                                        <input type="date" id="file-ip-1" class="form-control-file border" value="{{ old('complete_date') }}" name="complete_date" min="{{ date('Y-m-d') }}">
+                                        @error('complete_date')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="image">Profile Image <span class="text-danger">*</span></label>
+
+                                        <input type="file" id="file-ip-1" accept="image/*"
+                                            class="form-control-file border" value="{{ old('image') }}"
+                                            onchange="showPreview1(event);" name="image">
+                                        @error('image')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
+                                        <div class="preview mt-2">
+                                            <img src="" id="file-ip-1-preview" width="200px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+@endsection
+
+@section('script')
+    <!-- image preview -->
+    <script type="text/javascript">
+        function showPreview1(event) {
+            if (event.target.files.length > 0) {
+                var src = URL.createObjectURL(event.target.files[0]);
+                var preview = document.getElementById("file-ip-1-preview");
+                preview.src = src;
+                preview.style.display = "block";
+            }
+        }
+    </script>
+@endsection
