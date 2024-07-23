@@ -77,9 +77,9 @@
                                                             </form>
                                                         </button>
                                                     @endif
-                                                    <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#modal-default" title="Add Fees">Add Fee</button>
+                                                    <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-id="{{ $value->id }}" data-target="#editModal{{$value->id}}" title="Add Fees">Add Fee</button>
                                                    
-                                                    <div class="modal fade" id="modal-default">
+                                                    <div class="modal fade" id="editModal{{$value->id}}">
                                                         <div class="modal-dialog modal-lg">
                                                             <form action="{{ route('fees.store') }}" method="post">
                                                                 @csrf

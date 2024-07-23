@@ -11,5 +11,6 @@
     "Api": true,
     "Service": true,
     "Expenses": true,
-    "Students": true
+    "Students": true,
+    "Client": true
 }

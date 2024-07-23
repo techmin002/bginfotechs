@@ -62,7 +62,7 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-md-6">
                                             <!-- Bootstrap Switch -->
                                             <div class="card card-secondary">

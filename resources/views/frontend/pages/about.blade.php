@@ -80,7 +80,7 @@
                                     </defs>
                                     <text font-size="15">
                                         <textPath xlink:href="#circle" class="shape-1">
-                                            Creative Minds_, Creative Minds_
+                                            Creative Minds Creative Minds
                                         </textPath>
                                     </text>
                                 </svg>
@@ -117,21 +117,18 @@
                             <h2 class="sec-title">Making Your Business More Unique</h2>
                             <div class="desc">
                                 <p>
-                                    There are many variations of passages of Lorem Ipsum available, but the
-                                    majority have suffered alteration in some form, by injected humour, or
-                                    randomised words which don't look even slightly believable.
+                                    Welcome to BG Infotechs, a leading innovator in the software industry. We specialize in developing cutting-edge software solutions that empower businesses to achieve their goals with efficiency and reliability.
                                 </p>
                                 <p>
-                                    There are many variations of passages of Lorem Ipsum available, but the
-                                    majority have suffered alteration in some form,
+                                    Our team of experienced professionals is dedicated to delivering high-quality products and services that meet the unique needs of each client. From custom software development to IT consulting and support, we offer a wide range of services designed to help your business thrive in today's digital landscape.
                                 </p>
                                 <p>
-                                    by injected humour, or randomised words which don't look even slightly
-                                    believable.
+                                    At BG Infotechs, we pride ourselves on our commitment to excellence and our passion for technology. We believe in fostering a collaborative environment where creativity and innovation can flourish, enabling us to deliver exceptional results for our clients.
                                 </p>
+                                
                             </div>
                             <div class="about-button d-flex">
-                                <a href="about-us.html" class="tj-secondary-btn btn-border"><span>Read
+                                <a href="{{ route('aboutus') }}" class="tj-secondary-btn btn-border"><span>Read
                                         More</span></a>
                             </div>
                         </div>

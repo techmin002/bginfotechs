@@ -76,7 +76,7 @@ class CompanyProfileController extends Controller
         if ($request->logo)
         {
             $filename=$request->logo->getClientOriginalName();
-            $logo = $filename.'.'.$request->logo->extension();
+            $logo = $filename;
 
             $request->logo->move(public_path('upload/images/settings'), $logo);
 
@@ -89,7 +89,7 @@ class CompanyProfileController extends Controller
         if ($request->footer_logo)
         {
             $filename=$request->footer_logo->getClientOriginalName();
-            $footer_logo = $filename.'.'.$request->footer_logo->extension();
+            $footer_logo = $filename;
 
             $request->footer_logo->move(public_path('upload/images/settings'), $footer_logo);
 

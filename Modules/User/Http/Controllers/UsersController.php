@@ -17,8 +17,7 @@ class UsersController extends Controller
 {
     public function index() {
         abort_if(Gate::denies('access_user_management'), 403);
-        $users = User::latest()->get();
-
+        $users = User::whereNot('role_id', 7)->whereNot('role_id', 8)->latest()->get();
         return view('user::users.index',compact("users"));
     }
 

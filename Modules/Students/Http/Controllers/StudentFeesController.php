@@ -3,6 +3,7 @@
 namespace Modules\Students\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Payment;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -60,6 +61,14 @@ class StudentFeesController extends Controller
             'receipt' => $imageName,
             'student_id' => $request['student_id']
         ]);
+        $payments = new Payment();
+        $payments->amount = $request->fees;
+        $payments->methods = $request->method;
+        $payments->table = 'StudentFee';
+        $payments->table_id = $student->id;
+        $payments->receipt = $imageName;
+        $payments->paid_date= $request->date;
+        $payments->save();
         return redirect()->route('students.index')->with('success', 'Fees Added Successfully');
     }
 

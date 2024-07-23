@@ -1,7 +1,10 @@
 <body>
 @php
         $category=Modules\Service\Entities\ServiceCategory::all();
+        $company = Modules\Setting\Entities\CompanyProfile::first();
+
 @endphp
+
     <!-- start: Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
@@ -27,7 +30,7 @@
     <div class="tj-offcanvas-area d-lg-none">
         <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
             <div class="logo-area text-center">
-                <a href="index.html"><img src="{{ asset('frontend/images/logo/new_logo.png') }}" alt="Logo" /></a>
+                <a href="index.html"><img src="{{ asset('upload/images/settings/'.$company->logo) }}" alt="Bginfotechs Logo" /></a>
             </div>
             <div class="offcanvas-icon">
                 <a id="canva_close" href="#">
@@ -92,7 +95,7 @@
                     <div class="header-content-area">
                         <div class="logo-area">
                             <div class="logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('frontend/images/logo/new_logo.png') }}" alt="Logo" /></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('upload/images/settings/'.$company->logo) }}" alt="bginfotechs Logo" /></a>
                             </div>
                         </div>
                         <div class="tj-menu-area d-lg-block d-none" id="main-menu">
@@ -123,20 +126,18 @@
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="#">Product</a>
+                                        <a href="{{ url('/') }}">Product</a>
                                         <ul class="sub-menu">
                                             <li>
-                                                <a href="portfolio.html">Hamrovet</a>
+                                                <a href="https://hamrobhet.com/" title="Hamrobhet Matrimonial Site">Hamro Bhet</a>
                                             </li>
-                                            <li><a href="portfolio-details.html">Smart School</a></li>
-                                            
                                         </ul>
                                     </li>
                                     <li class="">
-                                        <a href="{{ route('blog.all') }}">Blog</a>
+                                        <a href="{{ route('blog.all') }}" title="Blog">Blog</a>
                                         
                                     </li>
-                                    <li><a href="{{ route('contact.index') }}">Contact</a></li>
+                                    <li><a href="{{ route('contact.index') }}" title="Contact">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>

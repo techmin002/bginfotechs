@@ -3,12 +3,14 @@
 namespace Modules\Students\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Payment;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 use Modules\Students\Entities\Student;
+use Modules\Students\Entities\StudentFees;
 use Spatie\Permission\Models\Role;
 class StudentsController extends Controller
 {
@@ -79,6 +81,20 @@ class StudentsController extends Controller
             'paid_fees' => $request['paid_fees'],
             'due_fees' => $due_fees,
         ]);
+        $students = StudentFees::create([
+            'fees' => $request['paid_fees'],
+            'date' => $request['admission_date'],
+            'method' => $request['method'] ?? 'cash',
+            'student_id' => $students->id
+        ]);
+        $payments = new Payment();
+        $payments->amount = $request->paid_fees;
+        $payments->methods = $request->method;
+        $payments->table = 'StudentFee';
+        $payments->table_id = $students->id;
+        $payments->receipt = $imageName;
+        $payments->paid_date= $request->admission_date;
+        $payments->save();
         return redirect()->route('students.index')->with('success', 'Student Added Successfully');
     }
 

@@ -1,4 +1,7 @@
 <!-- start: Footer Area -->
+@php
+    $company = Modules\Setting\Entities\CompanyProfile::first();
+@endphp
 <footer class="tj-footer-area">
     <div class="footer-menu-area">
         <div class="container">
@@ -7,35 +10,29 @@
                     <div class="footer-widget footer1-col-1">
                         <div class="footer-content-info">
                             <div class="footer-logo">
-                                <a href="index.html">
-                                    <img src="{{ asset('frontend/images/logo/new_logo.png') }}" alt="Logo" />
+                                <a href="{{ url('/') }}">
+                                    <img src="{{ asset('upload/images/settings/'.$company->footer_logo) }}" title="bginfotechs logo" alt="bginfotechs logo" />
                                 </a>
                             </div>
                             <p class="">
-                                At BG INFOTECHS, we specialize in crafting cutting-edge IT solutions tailored to meet the evolving
-                                 needs of businesses. With a commitment to innovation and excellence, we empower organizations 
-                                 to thrive in the digital age.
+                                {!! $company->introduction !!}
                             </p>
+                            
                             <div class="footer-share">
                                 <ul class="dot-style">
                                     <li>
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="{{ $company->instagram }}"><i class="fa-brands fa-instagram"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M8.51962 6.1948L13.8489 0H12.586L7.95861 5.37887L4.26275 0H0L5.58887 8.13379L0 14.63H1.26293L6.14957 8.94974L10.0527 14.63H14.3154L8.51929 6.1948H8.51962ZM1.71797 0.950725H3.65775L12.5866 13.7225H10.6468L1.71797 0.950725Z"
-                                                    fill="#161616" />
-                                            </svg>
+                                        <a href="{{ $company->youtube }}">
+                                            <i class="fa-brands fa-youtube"></i>
                                         </a>
                                     </li>
                                   <li>
                                    <a href="https://wa.me/%2B9779767692420" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                                    </li>
                                     <li>
-                                        <a href="https://www.facebook.com/profile.php?id=100093335074171"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="{{ $company->facebook }}"><i class="fa-brands fa-facebook-f"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -43,8 +40,8 @@
                     </div>
                 </div>
                 @php
-        $category=Modules\Service\Entities\ServiceCategory::all();
-@endphp
+                            $category=Modules\Service\Entities\ServiceCategory::all();
+                    @endphp
                 
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="footer-widget footer1-col-3">
@@ -53,7 +50,7 @@
                             <div class="footer-menu">
                                 <ul>
                                      @foreach($category as $cat)
-                                    <li><a href="{{ route('service.show',$cat->slug) }}">{{ $cat->title }}</a></li>
+                                    <li><a href="{{ route('service.show',$cat->slug) }}" title="{{ $cat->title }}">{{ $cat->title }}</a></li>
                                     @endforeach
                                    
                                 </ul>
@@ -70,8 +67,7 @@
                                     <li><a href="{{ route('aboutus') }}">About us</a></li>
                                     <li><a href="{{ route('services.list') }}">Services</a></li>
                                     <li><a href="{{ route('contact.index') }}">Contact Us</a></li>
-                                    <li><a href="#">Out Team</a></li>
-                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="{{ route('aboutus') }}">Out Team</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -83,8 +79,7 @@
                         <div class="widget_nav_menu">
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="#">Hamrobhet</a></li>
-                                    <li><a href="#">Smart School</a></li>
+                                    <li><a href="https://hamrobhet.com/">Hamrobhet</a></li>
                                     
                                 </ul>
                             </div>
@@ -103,11 +98,11 @@
                                     </li>
                                     <li>
                                         <span><i class="fa-solid fa-globe"></i></span><a
-                                            href="#">www.bginfotechs.com</a>
+                                            href="https://bginfotechs.com/">www.bginfotechs.com</a>
                                     </li>
                                     <li>
                                         <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
-                                        <a href="#">Taranagar 5, Dhangadhi, Kailali, Nepal</a>
+                                        <a href="https://bginfotechs.com/">Taranagar 5, Dhangadhi, Kailali, Nepal</a>
                                     </li>
                                     <li>
                                         <span><i class="fa-solid fa-phone-volume"></i></span>
@@ -121,6 +116,16 @@
             </div>
         </div>
     </div>
+    <hr>
+    <section>
+        <div class="footer-bottom">
+            <div class="container text-center">
+               <u><h3 style="color: white;">Our Partner</h3></u> 
+                           <a href="https://gravityweb.in/" target="_blank"><img style="height:50px" alt="bg infotechs logo" title="bginfotechs logo" src="{{ asset('frontend/images/logo/gravity_logo.webp') }}" title="Gravity Web"></a> 
+            </div>
+        </div>
+    </section>
+    <hr>
     <div class="copyright-area">
         <div class="container">
             <div class="row">
@@ -128,15 +133,13 @@
                     <div class="copyright-content-area">
                         <div class="copyright-left-content">
                             <p>
-                                Copyright © 2023 <a href="#" target="_blank"> BG Infotechs. </a> All Rights
+                                Copyright © 2023 <a href="https://bginfotechs.com/" target="_blank"> BG Infotechs. </a> All Rights
                                 Reserved.
                             </p>
                         </div>
                         <div class="copyright-menu">
                             <ul>
-                                <li><a href="#">Setting & Privacy</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="{{ route('contact.index') }}">Support</a></li>
+                                <li><a href="{{ route('contact.index') }}">Support ?</a></li>
                             </ul>
                         </div>
                     </div>

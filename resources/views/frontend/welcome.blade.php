@@ -132,7 +132,7 @@
                                     </p>
                                 </div>
                                 <div class="about-button d-flex">
-                                    <a href="about-us.html" class="tj-secondary-btn btn-border"><span>Read
+                                    <a href="{{ route('aboutus') }}" class="tj-secondary-btn btn-border"><span>Read
                                             More</span></a>
                                 </div>
                             </div>
@@ -288,11 +288,11 @@
                                             <div class="portfolio-image">
                                                 <a href="{{ url('/service/digital-marketing') }}"><img
                                                         src="frontend/images/portfolio/portfolio-1.jpg"
-                                                        alt="Image" /></a>
+                                                        alt="Digital Marketing" title="Digital Marketing" /></a>
                                             </div>
                                             <div class="portfolio-content">
                                                 <h3 class="title-link">
-                                                    <a href="{{ url('/service/digital-marketing') }}">Digital Marketing</a>
+                                                    <a href="{{ url('/service/digital-marketing') }}" title="Digital Marketing">Digital Marketing</a>
                                                 </h3>
                                                 <span class="sub-title">Marketing/Solution</span>
                                             </div>
@@ -304,11 +304,11 @@
                                             <div class="portfolio-image">
                                                 <a href="{{ url('/service/web-development') }}"><img
                                                         src="frontend/images/portfolio/portfolio-2.jpg"
-                                                        alt="Image" /></a>
+                                                        alt="Web Development" title="Web Development"/></a>
                                             </div>
                                             <div class="portfolio-content">
                                                 <h3 class="title-link">
-                                                    <a href="{{ url('/service/web-development') }}">Web Development</a>
+                                                    <a href="{{ url('/service/web-development') }}" title="Web Development"> Web Development</a>
                                                 </h3>
                                                 <span class="sub-title">Marketing/Consulting</span>
                                             </div>
@@ -320,11 +320,11 @@
                                             <div class="portfolio-image">
                                                 <a href="{{ url('/service/it-training') }}"><img
                                                         src="frontend/images/portfolio/portfolio-4.jpg"
-                                                        alt="Image" /></a>
+                                                        alt="UX/ UI Design" title="UX/ UI Design"/></a>
                                             </div>
                                             <div class="portfolio-content">
                                                 <h3 class="title-link">
-                                                    <a href="{{ url('/service/it-training') }}">UX/ UI Design</a>
+                                                    <a href="{{ url('/service/it-training') }}" title="UX/ UI Design">UX/ UI Design</a>
                                                 </h3>
                                                 <span class="sub-title">Marketing/Solution</span>
                                             </div>
@@ -336,11 +336,11 @@
                                             <div class="portfolio-image">
                                                 <a href="{{ url('/service/it-training') }}"><img
                                                         src="frontend/images/portfolio/portfolio-3.jpg"
-                                                        alt="Image" /></a>
+                                                        alt="IT Training" title="IT Training" /></a>
                                             </div>
                                             <div class="portfolio-content">
                                                 <h3 class="title-link">
-                                                    <a href="{{ url('/service/it-training') }}">IT Training</a>
+                                                    <a href="{{ url('/service/it-training') }}" title="IT Training">IT Training</a>
                                                 </h3>
                                                 <span class="sub-title">Marketing/ Desing Solution</span>
                                             </div>
@@ -396,23 +396,23 @@
                         <div class="faq-image-group">
                             <div class="faq-image1">
                                 <div class="group-image pulse">
-                                    <img src="frontend/images/about/about-1.png" alt="Image" />
+                                    <img src="frontend/images/about/about-1.png" alt="IT Training Nepal" />
                                 </div>
-                                <img class="group-shape pulse" src="frontend/images/shape/shape-21.svg" alt="Shape" />
+                                <img class="group-shape pulse" src="frontend/images/shape/shape-21.svg" alt="IT Training Dhangadhi" />
                                 <img class="group-shape1 shake-y" src="frontend/images/shape/shape-22.svg"
-                                    alt="Shape" />
-                                <img class="group-shape2 pulse" src="frontend/images/about/about-4.png" alt="Image" />
+                                alt="IT company Dhangadhi" />
+                                <img class="group-shape2 pulse" src="frontend/images/about/about-4.png" alt="IT Training Kailali" />
                             </div>
                             <div class="faq-image3 pulse">
-                                <img src="frontend/images/about/about-3.png" alt="Image" />
+                                <img src="frontend/images/about/about-3.png" alt="Web Development Nepal" />
                             </div>
                             <div class="faq-image2 pulse">
                                 <div class="group-image">
-                                    <img src="frontend/images/about/about-2.png" alt="Image" />
+                                    <img src="frontend/images/about/about-2.png" alt="Web Development in Dhangadhi" />
                                 </div>
-                                <img class="group-shape pulse" src="frontend/images/shape/shape-24.svg" alt="Shape" />
+                                <img class="group-shape pulse" src="frontend/images/shape/shape-24.svg" alt="Software company Dhangadhi" />
                                 <img class="group-shape1 shake-y" src="frontend/images/shape/shape-50.svg"
-                                    alt="Shape" />
+                                alt="Software company kailali" />
                             </div>
                         </div>
                     </div>
@@ -437,7 +437,7 @@
                                 @endforeach
                             </div>
                             <div class="accordion-shape">
-                                <img src="frontend/images/shape/shape-26.svg" alt="Shape" />
+                                <img src="frontend/images/shape/shape-26.svg" alt="Software company Pokhara" />
                             </div>
                         </div>
                     </div>
@@ -446,7 +446,7 @@
             </div>
             <div class="faq-section-shape">
                 <div class="faq-bg-shape pulse">
-                    <img src="frontend/images/shape/faq-shape.svg" alt="Shape" />
+                    <img src="frontend/images/shape/faq-shape.svg" alt="Software company butwal" />
                 </div>
             </div>
         </section>
@@ -470,7 +470,7 @@
                         <div class="tj-blog-item">
                             <div class="blog-image">
                                 <a href="{{ route('blog.details',$blog->slug) }}"><img src="{{ asset('upload/images/blogs/'.$blog->image) }}"
-                                        alt="Image" /></a>
+                                        alt="{{ $blog->title }}" /></a>
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-meta">
@@ -498,10 +498,10 @@
             </div>
             <div class="blog-section-shape">
                 <div class="blog-bg-shape">
-                    <img src="frontend/images/shape/blog-bg-shape.svg" alt="Shape" />
+                    <img src="frontend/images/shape/blog-bg-shape.svg" alt="Software company nepalgunj" />
                 </div>
                 <div class="blog-bg-shape1">
-                    <img src="frontend/images/shape/blog-bg-shape1.svg" alt="Shape" />
+                    <img src="frontend/images/shape/blog-bg-shape1.svg" alt="Software company tikapur" />
                 </div>
             </div>
         </section>
@@ -531,7 +531,7 @@
                                 </div>
                                 <div class="comntact-list">
                                     <div class="contact-icon">
-                                        <img src="{{asset('frontend/images/icon/phone.svg')}}" alt="Icon" />
+                                        <img src="{{asset('frontend/images/icon/phone.svg')}}" alt="app development company dhangadhi" />
                                     </div>
                                     <div class="contact-header">
                                         <span class="d-block">For urgent help</span>
@@ -540,7 +540,7 @@
                                 </div>
                                 <div class="comntact-list">
                                     <div class="contact-icon">
-                                        <img src="{{asset('frontend/images/icon/mail.svg')}}" alt="Icon" />
+                                        <img src="{{asset('frontend/images/icon/mail.svg')}}" alt="app development company kailali" />
                                     </div>
                                     <div class="contact-header">
                                         <span class="d-block">Mail us 24/7</span>

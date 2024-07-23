@@ -48,38 +48,72 @@
               </p>
             </a>
           </li>
-
+        
           @can('access_user_management')
           <li class="nav-item {{ request()->routeIs('users.*','roles.*') ? 'menu-is-opening menu-open' : '' }}">
             <a href="#" class="nav-link" {{ request()->routeIs('users.*','roles.*') ? 'active' : '' }}>
-              <i class="nav-icon fas fa-users"></i>
+              <i class="fas fa-users"></i>
               <p>
-                Users
+                Users Managements
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('roles.index') }}" class="nav-link {{ request()->routeIs('roles.index') ? 'active' : '' }}">
-                  {{-- <i class="far fa-circle nav-icon"></i> --}}
+                  <i class="fas fa-user-tag"></i>
                   <p>Roles</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('users.index') }}" class="nav-link {{ request()->routeIs('users.index') ? 'active' : '' }}">
-                  {{-- <i class="far fa-circle nav-icon"></i> --}}
+                  <i class="fas fa-users-cog"></i>
                   <p>Users</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('students.index') }}" class="nav-link {{ request()->routeIs('students.index') ? 'active' : '' }}">
+                  <i class="fas fa-user-graduate"></i>
                   <p>Students</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('clients.index') }}" class="nav-link {{ request()->routeIs('clients.index') ? 'active' : '' }}">
+                  <i class="fas fa-user-clock"></i>
+                  <p>Clients</p>
                 </a>
               </li>
             </ul>
           </li>
           @endcan
           
+          @can('access_user_management')
+          <li class="nav-item {{ request()->routeIs('projects.*','roles.*') ? 'menu-is-opening menu-open' : '' }}">
+            <a href="#" class="nav-link" {{ request()->routeIs('projects.*','roles.*') ? 'active' : '' }}>
+              <i class="fas fa-project-diagram"></i>
+              <p>
+                Project Managements
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('packages.index') }}" class="nav-link {{ request()->routeIs('packages.index') ? 'active' : '' }}">
+                  {{-- <i class="far fa-circle nav-icon"></i> --}}
+                  <i class="fas fa-box-open"></i>
+                  <p>All Packages</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('projects.index') }}" class="nav-link {{ request()->routeIs('projects.index') ? 'active' : '' }}">
+                  <i class="fas fa-tasks"></i>
+                  <p>All Projects</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          @endcan
           @can('access_sliders')
           <li class="nav-item {{ request()->routeIs('sliders.*') ? 'menu-is-opening menu-open' : '' }}">
             <a href="#" class="nav-link" {{ request()->routeIs('sliders.*') ? 'active' : '' }}>
