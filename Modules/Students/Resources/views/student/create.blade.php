@@ -133,6 +133,20 @@
                                        
                                     </div>
                                     <div class="form-group">
+                                        <label for="method">Payment Methods <span class="text-danger">*</span></label>
+
+                                       <select name="method" id="" class="form-control">
+                                        <option value="cash">Cash</option>
+                                        <option value="online">Online</option>
+                                        <option value="cheque">Cheque</option>
+                                        
+                                       </select>
+                                        @error('paid_fees')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
+                                       
+                                    </div>
+                                    <div class="form-group">
                                         <label for="admission_date">Admission Date <span class="text-danger">*</span></label>
 
                                         <input type="date" min="0"  id="file-ip-1" 
