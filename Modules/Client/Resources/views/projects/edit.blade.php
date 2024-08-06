@@ -34,7 +34,7 @@
                         {{-- @dd($value->clientPayment) --}}
                         <div class="col-md-6">
                             {!! Form::label('methods', 'Methodas', ['class' => 'form-label']) !!}
-                            {!! Form::select('methods', $methods, $value->clientPayment->methods, ['class' => 'form-control']) !!}
+                            {!! Form::select('methods', $methods, $value->clientPayment->methods ?? '', ['class' => 'form-control']) !!}
                         </div>
                     </div>
                     {!! Form::label('package_id', 'Package', ['class' => 'form-label']) !!}
@@ -54,7 +54,9 @@
                     <div class="preview mt-2">
                         <img src="" id="file-ip-2-preview"
                             width="200px">
+                            @if(isset($value->clientPayment))
                             <img src="{{ asset('upload/images/projects/'.$value->clientPayment->receipt) }}" width="200px">
+                        @endif
 
                     </div>
                 </div>

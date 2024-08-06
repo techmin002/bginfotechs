@@ -73,6 +73,8 @@ class StudentsController extends Controller
             'name' => $request['name'],
             'user_id' => $user->id,
             'address' => $request['address'],
+            'status' => $request['status'],
+            'phone' => $request['phone'],
             'training' => $request['training'],
             'qualification' => $request['qualification'],
             'admission_date' => $request['admission_date'],
@@ -127,7 +129,9 @@ class StudentsController extends Controller
         $student->update([
             'name' => $request['name'],
             'address' => $request['address'],
+            'phone' => $request['phone'],
             'training' => $request['training'],
+            'status' => $request['status'],
             'qualification' => $request['qualification'],
             'admission_date' => $request['admission_date'],
             'complete_date' => $request['complete_date'],

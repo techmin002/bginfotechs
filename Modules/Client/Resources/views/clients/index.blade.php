@@ -53,7 +53,7 @@
                                                     <a href="{{ route('clients.edit', $value->id) }}"
                                                         title="Edit Student" class="btn btn-primary btn-xs"><i
                                                             class="fa fa-edit"></i></a>
-                                                    <a href="{{ route('clients.show',$value->id) }}" class="btn btn-success btn-xs" title="View Fees Details"><i class="fa fa-eye"></i></a>
+                                                    {{-- <a href="{{ route('clients.show',$value->id) }}" class="btn btn-success btn-xs" title="View Fees Details"><i class="fa fa-eye"></i></a> --}}
                                                     <button id="delete" title="Delete Student"
                                                         class="btn btn-danger btn-xs"
                                                         onclick="event.preventDefault();
@@ -68,7 +68,7 @@
                                                         </form>
                                                     </button>
                                                 @endif
-                                                <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-id="{{ $value->id }}" data-target="#editModal{{$value->id}}" title="Add Fees">Add Fee</button>
+                                                {{-- <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-id="{{ $value->id }}" data-target="#editModal{{$value->id}}" title="Add Fees">Add Fee</button>
                                                
                                                 <div class="modal fade" id="editModal{{$value->id}}">
                                                     <div class="modal-dialog modal-lg">
@@ -132,7 +132,7 @@
                                                         </form>
                                                     </div>
 
-                                                </div>
+                                                </div> --}}
                                             </td>
                                         </tr>
                                         @endforeach

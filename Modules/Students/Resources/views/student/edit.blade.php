@@ -63,14 +63,28 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="role">Role <span class="text-danger">*</span></label>
-                                        <select class="form-control" name="role" id="role" required>
-                                            <option value="7" selected>Student</option>
-                                            {{-- @foreach (\Spatie\Permission\Models\Role::where('name', '!=', 'Super Admin')->get() as $role) --}}
-                                                {{-- <option value="{{ $role->name }}">{{ $role->name }}</option> --}}
-                                            {{-- @endforeach --}}
-                                        </select>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="role">Role <span class="text-danger">*</span></label>
+                                                <select class="form-control" name="role" id="role" required>
+                                                    <option value="7" selected>Student</option>
+                                                    {{-- @foreach (\Spatie\Permission\Models\Role::where('name', '!=', 'Super Admin')->get() as $role) --}}
+                                                    {{-- <option value="{{ $role->name }}">{{ $role->name }}</option> --}}
+                                                    {{-- @endforeach --}}
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="role">Phone Number <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" name="phone" value="{{ $student->phone }}" class="form-control"
+                                                    placeholder="Contact Number">
+                                            </div>
+
+                                        </div>
                                     </div>
 
                                     <div class="form-group">

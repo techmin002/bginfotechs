@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('user_id');
             $table->text('address');
+            $table->string('phone');
             $table->string('training');
             $table->string('qualification');
             $table->date('admission_date');

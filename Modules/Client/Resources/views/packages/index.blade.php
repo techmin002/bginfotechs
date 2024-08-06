@@ -130,7 +130,7 @@
                                                     </button>
                                                 <div class="modal fade" id="editModal{{$value->id}}">
                                                     <div class="modal-dialog modal-lg">
-                                                        <form action="{{ route('packages.update',$value->id) }}" method="post">
+                                                        <form action="{{ route('packages.update',$value->id) }}" method="post" enctype="multipart/form-data">
                                                             @method('PUT')
                                                             @csrf
                                                         <div class="modal-content">

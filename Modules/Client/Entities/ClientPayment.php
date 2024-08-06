@@ -17,6 +17,7 @@ class ClientPayment extends Model
         'receipt',
         'paid_amount',
         'paid_date',
+        'methods',
     ];
     
     protected static function newFactory(): ClientPaymentFactory

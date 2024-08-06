@@ -142,6 +142,9 @@
                             </nav>
                         </div>
                         <div class="header-button d-none d-lg-block">
+                            <a href="{{ route('student.login') }}" class="btn btn-outline-info rounded"><span>Student Login</span></a>
+                        </div>
+                        <div class="header-button d-none d-lg-block">
                             <a href="{{ route('contact.index') }}" class="tj-secondary-btn btn-border"><span>Contact Us</span></a>
                         </div>
                         <div class="tj-canva-icon d-lg-none">

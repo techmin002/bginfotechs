@@ -20,7 +20,8 @@
                     <div class="row d-flex">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <a href="{{ route('students.index') }}" class="btn btn-success">Go Back <i class="bi bi-check"></i></a href="{{ route('students.index') }}">
+                                <a href="{{ route('students.index') }}" class="btn btn-success">Go Back <i
+                                        class="bi bi-check"></i></a href="{{ route('students.index') }}">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -64,29 +65,41 @@
                                     <div class="form-row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="qualification">Qualification <span class="text-danger">*</span></label>
+                                                <label for="qualification">Qualification <span
+                                                        class="text-danger">*</span></label>
                                                 <input class="form-control" type="text" name="qualification" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="address">Address <span
-                                                        class="text-danger">*</span></label>
-                                                <input class="form-control" type="text" name="address"
-                                                    required>
+                                                <label for="address">Address <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" name="address" required>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="role">Role <span class="text-danger">*</span></label>
-                                        <select class="form-control" name="role" id="role" required>
-                                            <option value="7" selected>Student</option>
-                                            {{-- @foreach (\Spatie\Permission\Models\Role::where('name', '!=', 'Super Admin')->get() as $role) --}}
-                                                {{-- <option value="{{ $role->name }}">{{ $role->name }}</option> --}}
-                                            {{-- @endforeach --}}
-                                        </select>
-                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="role">Role <span class="text-danger">*</span></label>
+                                                <select class="form-control" name="role" id="role" required>
+                                                    <option value="7" selected>Student</option>
+                                                    {{-- @foreach (\Spatie\Permission\Models\Role::where('name', '!=', 'Super Admin')->get() as $role) --}}
+                                                    {{-- <option value="{{ $role->name }}">{{ $role->name }}</option> --}}
+                                                    {{-- @endforeach --}}
+                                                </select>
+                                            </div>
 
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="role">Phone Number <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" name="phone" class="form-control"
+                                                    placeholder="Contact Number">
+                                            </div>
+
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label for="status">Status <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
@@ -104,66 +117,72 @@
                                     <div class="form-group">
                                         <label for="training">Trainigs <span class="text-danger">*</span></label>
 
-                                        <input type="text" id="file-ip-1"   
-                                            class="form-control-file border" value="{{ old('training') }}"
-                                            onchange="showPreview1(event);" name="training">
+                                        <input type="text" id="file-ip-1" class="form-control-file border"
+                                            value="{{ old('training') }}" onchange="showPreview1(event);"
+                                            name="training">
                                         @error('training')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
-                                        
+
                                     </div>
                                     <div class="form-group">
                                         <label for="total_fees">Total Fees <span class="text-danger">*</span></label>
 
-                                        <input type="number" min="0" name="total_fees" id="file-ip-1" class="form-control-file border" value="{{ old('total_fees') }}"
-                                            >
+                                        <input type="number" min="0" name="total_fees" id="file-ip-1"
+                                            class="form-control-file border" value="{{ old('total_fees') }}">
                                         @error('total_fees')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
-                                        
+
                                     </div>
                                     <div class="form-group">
                                         <label for="paid_fees">Paid Fees <span class="text-danger">*</span></label>
 
-                                        <input type="number" min="0"  id="file-ip-1" 
-                                            class="form-control-file border" value="{{ old('paid_fees') }}" name="paid_fees">
+                                        <input type="number" min="0" id="file-ip-1"
+                                            class="form-control-file border" value="{{ old('paid_fees') }}"
+                                            name="paid_fees">
                                         @error('paid_fees')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
-                                       
+
                                     </div>
                                     <div class="form-group">
                                         <label for="method">Payment Methods <span class="text-danger">*</span></label>
 
-                                       <select name="method" id="" class="form-control">
-                                        <option value="cash">Cash</option>
-                                        <option value="online">Online</option>
-                                        <option value="cheque">Cheque</option>
-                                        
-                                       </select>
+                                        <select name="method" id="" class="form-control">
+                                            <option value="cash">Cash</option>
+                                            <option value="online">Online</option>
+                                            <option value="cheque">Cheque</option>
+
+                                        </select>
                                         @error('paid_fees')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
-                                       
+
                                     </div>
                                     <div class="form-group">
-                                        <label for="admission_date">Admission Date <span class="text-danger">*</span></label>
+                                        <label for="admission_date">Admission Date <span
+                                                class="text-danger">*</span></label>
 
-                                        <input type="date" min="0"  id="file-ip-1" 
-                                            class="form-control-file border" value="{{ old('admission_date') }}" name="admission_date" max="{{ date('Y-m-d') }}">
-                                        @error('admission_date')    
+                                        <input type="date" min="0" id="file-ip-1"
+                                            class="form-control-file border" value="{{ old('admission_date') }}"
+                                            name="admission_date" max="{{ date('Y-m-d') }}">
+                                        @error('admission_date')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
-                                       
+
                                     </div>
                                     <div class="form-group">
-                                        <label for="complete_date">Training End Date <span class="text-danger">*</span></label>
-                                        <input type="date" id="file-ip-1" class="form-control-file border" value="{{ old('complete_date') }}" name="complete_date" min="{{ date('Y-m-d') }}">
+                                        <label for="complete_date">Training End Date <span
+                                                class="text-danger">*</span></label>
+                                        <input type="date" id="file-ip-1" class="form-control-file border"
+                                            value="{{ old('complete_date') }}" name="complete_date"
+                                            min="{{ date('Y-m-d') }}">
                                         @error('complete_date')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label for="image">Profile Image <span class="text-danger">*</span></label>
 

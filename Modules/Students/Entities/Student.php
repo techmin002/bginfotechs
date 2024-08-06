@@ -19,6 +19,7 @@ class Student extends Model
         'name',
         'user_id',
         'address',
+        'phone',
         'training',
         'qualification',
         'admission_date',

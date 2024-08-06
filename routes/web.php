@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Modules\Service\Entities\ServiceCategory;
@@ -36,3 +37,6 @@ Route::post('frontend/contact/store', [FrontendController::class, 'contactStore'
 Route::get('/service/{slug}', [FrontendController::class, 'serviceShow'])->name('service.show');
 
 Route::resource('inquires',InquiryController::class);
+Route::get('student/login', [StudentController::class,'login'])->name('student.login');
+Route::get('student/dashboard', [StudentController::class,'studentDashboard'])->name('sutdents.dashboard');
+Route::post('student/password/update', [StudentController::class,'studentPassword'])->name('student.password.update');
