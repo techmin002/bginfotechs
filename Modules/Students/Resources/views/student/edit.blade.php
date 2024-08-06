@@ -46,7 +46,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
+                                    <div class="form-row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="password">Password <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="password" name="password">
+                                                @if ($errors->has('password'))
+                                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                                            @endif
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="password_confirmation">Confirm Password <span
+                                                        class="text-danger">*</span></label>
+                                                <input class="form-control" type="password" name="password_confirmation">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-row">
                                         <div class="col-lg-6">
                                             <div class="form-group">

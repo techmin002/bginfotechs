@@ -123,7 +123,10 @@ class StudentsController extends Controller
      */
     public function update(Request $request, $id): RedirectResponse
     {
-        
+        $request->validate([
+            'name'     => 'required|string|max:255',
+            'password' => 'confirmed',
+        ]);
         $student = Student::where('id',$id)->first();
         $due_fees = $request->total_fees - $request->paid_fees;
         $student->update([
@@ -150,6 +153,7 @@ class StudentsController extends Controller
         }
         $user->update([
             'name'     => $request->name,
+            'password' => Hash::make($request->password),
             'image' => $imageName
         ]);
         return redirect()->route('students.index')->with('success', 'Student Updated Successfully');
