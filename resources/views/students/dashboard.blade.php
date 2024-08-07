@@ -3,9 +3,9 @@
     <!-- start: Breadcrumb Area -->
     <section class="breadcrumb-wrapper">
         <div class="container">
-            <div class="row vh-100">
+            <div class="row">
                 <div class="col-lg-4 ">
-                    <div class="card vh-100">
+                    <div class="card">
                         <div class="card-header text-center">
                             <img src="{{ asset('upload/images/users/' . $student->user->image) }}" class="w-50 rounded-circle"
                                 height="200px" alt="">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 ">
-                    <div class="card vh-100">
+                    <div class="card">
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                 aria-labelledby="v-pills-home-tab">
