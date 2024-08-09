@@ -38,12 +38,18 @@
                                                 <label for="name">Name <span class="text-danger">*</span></label>
                                                 <input class="form-control" type="text" name="name" required>
                                             </div>
+                                            @error('name')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="email">Email <span class="text-danger">*</span></label>
                                                 <input class="form-control" type="email" name="email" required>
                                             </div>
+                                            @error('email')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -52,6 +58,9 @@
                                                 <label for="password">Password <span class="text-danger">*</span></label>
                                                 <input class="form-control" type="password" name="password" required>
                                             </div>
+                                            @error('password')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
@@ -60,6 +69,9 @@
                                                 <input class="form-control" type="password" name="password_confirmation"
                                                     required>
                                             </div>
+                                            @error('password_cconfirmation')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -69,12 +81,18 @@
                                                         class="text-danger">*</span></label>
                                                 <input class="form-control" type="text" name="qualification" required>
                                             </div>
+                                            @error('qualification')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="address">Address <span class="text-danger">*</span></label>
                                                 <input class="form-control" type="text" name="address" required>
                                             </div>
+                                            @error('address')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -97,7 +115,9 @@
                                                 <input type="text" name="phone" class="form-control"
                                                     placeholder="Contact Number">
                                             </div>
-
+                                            @error('phone')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                         </div>
                                     </div>
                                     <div class="form-group">
