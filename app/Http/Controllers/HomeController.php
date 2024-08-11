@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if(auth()->user()->role_id == 7)
+        {
+            return redirect()->route('sutdents.dashboard');
+        }
         return view('setting::index');
     }
     

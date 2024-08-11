@@ -10,6 +10,10 @@ use Modules\Students\Entities\Student;
 class StudentController extends Controller
 {
     public function login(){
+        if(auth()->user())
+        {
+            return back();
+        }
         return view('students.login');
     }
     public function studentDashboard()
