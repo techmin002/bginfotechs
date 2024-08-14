@@ -133,7 +133,7 @@ class ClientProjectController extends Controller
         $package->title = $request->title;
         $package->package_id = $request->package_id;
         $package->price = $request->price;
-        $package->paid_amount = $request->paid_amount;
+        $package->paid_amount = $request->paid_amount ?? $package->paid_amount;
         $package->client_id = $request->client_id;
         $package->start_date = $request->start_date;
         $package->end_date = $request->end_date;

@@ -181,15 +181,15 @@
                             <div class="team-share">
                                 <ul class="dot-style">
                                     <li>
-                                        <a href="https://www.facebook.com/er.sandeshbogati420" target="_blank"><i
+                                        <a href="https://www.facebook.com/profile.php?id=100093335074171" target="_blank"><i
                                                 class="fa-brands fa-facebook-f"></i></a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/sandesh-bogati-71973a1a6/"
+                                        <a href="https://www.linkedin.com/company/102389496/admin/dashboard/"
                                             target="_blank"><i class="fab fa-linkedin"></i></a>
                                     </li>
                                     <li>
-                                        <a href="https://www.instagram.com/sandyuv_bogati" target="_blank"><i
+                                        <a href="https://www.instagram.com/bginfotechs?igsh=Mndob2E1bGNiMjRu&utm_source=qr" target="_blank"><i
                                                 class="fa-brands fa-instagram"></i></a>
                                     </li>
                                 </ul>
