@@ -58,18 +58,38 @@
                                     <div class="form-row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="password">Password <span class="text-danger">*</span></label>
-                                                <input class="form-control" type="password" name="password">
-                                                @if ($errors->has('password'))
-                                                    <span class="text-danger">{{ $errors->first('password') }}</span>
-                                                @endif
+                                                <label>Password</label>
+                                                <div class="input-group mb-3" id="show_hide_password">
+                                                    <input type="password" class="form-control" placeholder="Password"
+                                                        aria-label="password" name="password" required
+                                                        aria-describedby="button-addon2">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" type="button"
+                                                            id="button-addon2"><i class="fa fa-eye-slash"
+                                                                aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                                @error('password')
+                                                    <p style="color: red">{{ $message }}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="password_confirmation">Confirm Password <span
                                                         class="text-danger">*</span></label>
-                                                <input class="form-control" type="password" name="password_confirmation">
+                                                <div class="input-group" id="show_hide_confirm_password">
+                                                    <input class="form-control" name="password_confirmation"
+                                                        type="password">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" type="button"
+                                                            id="button-addon2"><i class="fa fa-eye-slash"
+                                                                aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                                @error('password_cconfirmation')
+                                                    <p style="color: red">{{ $message }}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -219,15 +239,41 @@
 @endsection
 
 @section('script')
-    <!-- image preview -->
-    <script type="text/javascript">
-        function showPreview1(event) {
-            if (event.target.files.length > 0) {
-                var src = URL.createObjectURL(event.target.files[0]);
-                var preview = document.getElementById("file-ip-1-preview");
-                preview.src = src;
-                preview.style.display = "block";
-            }
+<script type="text/javascript">
+    function showPreview1(event) {
+        if (event.target.files.length > 0) {
+            var src = URL.createObjectURL(event.target.files[0]);
+            var preview = document.getElementById("file-ip-1-preview");
+            preview.src = src;
+            preview.style.display = "block";
         }
-    </script>
+    }
+    $(document).ready(function() {
+        $("#show_hide_password button").on('click', function(event) {
+            event.preventDefault();
+            if ($('#show_hide_password input').attr("type") == "text") {
+                $('#show_hide_password input').attr('type', 'password');
+                $('#show_hide_password i').addClass("fa-eye-slash");
+                $('#show_hide_password i').removeClass("fa-eye");
+            } else if ($('#show_hide_password input').attr("type") == "password") {
+                $('#show_hide_password input').attr('type', 'text');
+                $('#show_hide_password i').removeClass("fa-eye-slash");
+                $('#show_hide_password i').addClass("fa-eye");
+            }
+        });
+        $("#show_hide_confirm_password button").on('click', function(event) {
+            event.preventDefault();
+            if ($('#show_hide_confirm_password input').attr("type") == "text") {
+                $('#show_hide_confirm_password input').attr('type', 'password');
+                $('#show_hide_confirm_password i').addClass("fa-eye-slash");
+                $('#show_hide_confirm_password i').removeClass("fa-eye");
+            } else if ($('#show_hide_confirm_password input').attr("type") == "password") {
+                $('#show_hide_confirm_password input').attr('type', 'text');
+                $('#show_hide_confirm_password i').removeClass("fa-eye-slash");
+                $('#show_hide_confirm_password i').addClass("fa-eye");
+            }
+        });
+
+    });
+</script>
 @endsection

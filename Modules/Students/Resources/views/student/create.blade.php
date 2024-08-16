@@ -39,8 +39,8 @@
                                                 <input class="form-control" type="text" name="name" required>
                                             </div>
                                             @error('name')
-                                            <p style="color: red">{{ $message }}</p>
-                                        @enderror
+                                                <p style="color: red">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
@@ -48,30 +48,46 @@
                                                 <input class="form-control" type="email" name="email" required>
                                             </div>
                                             @error('email')
-                                            <p style="color: red">{{ $message }}</p>
-                                        @enderror
+                                                <p style="color: red">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="password">Password <span class="text-danger">*</span></label>
-                                                <input class="form-control" type="password" name="password" required>
+                                                <label>Password</label>
+                                                <div class="input-group mb-3" id="show_hide_password">
+                                                    <input type="password" class="form-control" placeholder="Password"
+                                                        aria-label="password" name="password" required
+                                                        aria-describedby="button-addon2">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" type="button"
+                                                            id="button-addon2"><i class="fa fa-eye-slash"
+                                                                aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                                @error('password')
+                                                    <p style="color: red">{{ $message }}</p>
+                                                @enderror
                                             </div>
-                                            @error('password')
-                                            <p style="color: red">{{ $message }}</p>
-                                        @enderror
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="password_confirmation">Confirm Password <span
                                                         class="text-danger">*</span></label>
-                                                <input class="form-control" type="password" name="password_confirmation"
-                                                    required>
+                                                <div class="input-group" id="show_hide_confirm_password">
+                                                    <input class="form-control" name="password_confirmation"
+                                                        type="password">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" type="button"
+                                                            id="button-addon2"><i class="fa fa-eye-slash"
+                                                                aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+                                                @error('password_cconfirmation')
+                                                    <p style="color: red">{{ $message }}</p>
+                                                @enderror
                                             </div>
-                                            @error('password_cconfirmation')
-                                            <p style="color: red">{{ $message }}</p>
-                                        @enderror
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -82,8 +98,8 @@
                                                 <input class="form-control" type="text" name="qualification" required>
                                             </div>
                                             @error('qualification')
-                                            <p style="color: red">{{ $message }}</p>
-                                        @enderror
+                                                <p style="color: red">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
@@ -91,8 +107,8 @@
                                                 <input class="form-control" type="text" name="address" required>
                                             </div>
                                             @error('address')
-                                            <p style="color: red">{{ $message }}</p>
-                                        @enderror
+                                                <p style="color: red">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -116,8 +132,8 @@
                                                     placeholder="Contact Number">
                                             </div>
                                             @error('phone')
-                                            <p style="color: red">{{ $message }}</p>
-                                        @enderror
+                                                <p style="color: red">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -237,5 +253,32 @@
                 preview.style.display = "block";
             }
         }
+        $(document).ready(function() {
+            $("#show_hide_password button").on('click', function(event) {
+                event.preventDefault();
+                if ($('#show_hide_password input').attr("type") == "text") {
+                    $('#show_hide_password input').attr('type', 'password');
+                    $('#show_hide_password i').addClass("fa-eye-slash");
+                    $('#show_hide_password i').removeClass("fa-eye");
+                } else if ($('#show_hide_password input').attr("type") == "password") {
+                    $('#show_hide_password input').attr('type', 'text');
+                    $('#show_hide_password i').removeClass("fa-eye-slash");
+                    $('#show_hide_password i').addClass("fa-eye");
+                }
+            });
+            $("#show_hide_confirm_password button").on('click', function(event) {
+                event.preventDefault();
+                if ($('#show_hide_confirm_password input').attr("type") == "text") {
+                    $('#show_hide_confirm_password input').attr('type', 'password');
+                    $('#show_hide_confirm_password i').addClass("fa-eye-slash");
+                    $('#show_hide_confirm_password i').removeClass("fa-eye");
+                } else if ($('#show_hide_confirm_password input').attr("type") == "password") {
+                    $('#show_hide_confirm_password input').attr('type', 'text');
+                    $('#show_hide_confirm_password i').removeClass("fa-eye-slash");
+                    $('#show_hide_confirm_password i').addClass("fa-eye");
+                }
+            });
+
+        });
     </script>
 @endsection
