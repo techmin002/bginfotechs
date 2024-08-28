@@ -13,6 +13,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Modules\Setting\Http\Controllers\CompanyProfileController;
+use Modules\Setting\Http\Controllers\EventController;
 
 Route::prefix('setting')->group(function() {
     Route::get('/', 'SettingController@index');
@@ -20,6 +21,9 @@ Route::prefix('setting')->group(function() {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('company','CompanyProfileController');
+    Route::resource('events','EventController');
+    Route::get('events/list',[EventController::class,'eventList'])->name('events.data');
+
     Route::get('why/us',[CompanyProfileController::class,'whyUs'])->name('whyus.index');
     Route::post('whyus/store',[CompanyProfileController::class,'WhyUsStore'])->name('whyus.store');
     Route::put('whyus/update/{id}',[CompanyProfileController::class,'WhyUsUpdate'])->name('whyus.update');

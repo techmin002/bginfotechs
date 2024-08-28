@@ -342,6 +342,12 @@
           </li>
           @endcan
             <li class="nav-item">
+              <a href="{{ route('events.index') }}" class="nav-link {{ request()->routeIs('events.index') ? 'active' : '' }}">
+                <i class="far fa-calendar nav-icon"></i>
+                <p>Event</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="{{ route('galleries.index') }}" class="nav-link {{ request()->routeIs('galleries.index') ? 'active' : '' }}">
                 <i class="far fa-image nav-icon"></i>
                 <p>Gallery</p>
