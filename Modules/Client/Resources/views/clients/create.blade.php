@@ -24,7 +24,7 @@
                                         class="bi bi-check"></i></a href="{{ route('students.index') }}">
                             </div>
                         </div>
-                        
+
                         <div class="col-md-8">
                             <div class="card">
                                 <dv class="card-header">
@@ -35,13 +35,21 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="name">Name <span class="text-danger">*</span></label>
-                                                <input class="form-control" placeholder="Enter Name" type="text" name="name" required>
+                                                <input class="form-control" placeholder="Enter Name" type="text"
+                                                    value="{{ old('name') }}" name="name" required>
+                                                @error('name')
+                                                    <p style="color: red">{{ $message }}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="email">Email <span class="text-danger">*</span></label>
-                                                <input class="form-control" placeholder="Enter Email" type="email" name="email" required>
+                                                <input class="form-control" placeholder="Enter Email" type="email"
+                                                    value="{{ old('email') }}" name="email" required>
+                                                    @error('email')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -49,15 +57,22 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="password">Password <span class="text-danger">*</span></label>
-                                                <input class="form-control" placeholder="Enter Password" type="password" name="password" required>
+                                                <input class="form-control" placeholder="Enter Password" type="password"
+                                                     name="password" required>
+                                                    @error('password')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="password_confirmation">Confirm Password <span
                                                         class="text-danger">*</span></label>
-                                                <input class="form-control" placeholder="Enter Confirm Password" type="password" name="password_confirmation"
-                                                    required>
+                                                <input class="form-control" placeholder="Enter Confirm Password"
+                                                    type="password" name="password_confirmation" required>
+                                                    @error('password_confirmation')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -66,13 +81,21 @@
                                             <div class="form-group">
                                                 <label for="qualification">Contact Number <span
                                                         class="text-danger">*</span></label>
-                                                <input class="form-control" placeholder="Enter Contact Number" type="text" name="phone_no" required>
+                                                <input class="form-control" placeholder="Enter Contact Number"
+                                                    type="text" value="{{ old('phone_no') }}" name="phone_no" required>
+                                                    @error('phone_no')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="address">Address <span class="text-danger">*</span></label>
-                                                <input class="form-control" placeholder="Enter Address" type="text" name="address" required>
+                                                <input class="form-control" placeholder="Enter Address" type="text"
+                                                    value="{{ old('address') }}" name="address" required>
+                                                    @error('address')
+                                            <p style="color: red">{{ $message }}</p>
+                                        @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -88,9 +111,9 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                        <div class="form-group text-center">
-                                            <button class="btn btn-primary">Save Changes <i class="bi bi-check"></i></button>
-                                        </div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-primary">Save Changes <i class="bi bi-check"></i></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -104,45 +127,52 @@
                                         <label for="company_name">Company Name <span class="text-danger">*</span></label>
 
                                         <input type="text" id="file-ip-1" class="form-control-file border"
-                                            placeholder="Enter Company Name"value="{{ old('company_name') }}" name="company_name">
+                                            placeholder="Enter Company Name"value="{{ old('company_name') }}"
+                                            name="company_name">
                                         @error('company_name')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="pan_vat">Company PAN/ VAT <small class="">(optional)</small></label>
+                                        <label for="pan_vat">Company PAN/ VAT <small
+                                                class="">(optional)</small></label>
 
                                         <input type="number" min="0" name="pan_vat" id="file-ip-1"
-                                            class="form-control-file border" placeholder="Enter Company PAN OR VAT Number"value="{{ old('pan_vat') }}">
+                                            class="form-control-file border"
+                                            placeholder="Enter Company PAN OR VAT Number"value="{{ old('pan_vat') }}">
                                         @error('pan_vat')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="company_phone">Contact No. <small class="">(optional)</small></label>
+                                        <label for="company_phone">Contact No. <small
+                                                class="">(optional)</small></label>
 
                                         <input type="number" min="0" id="file-ip-1"
-                                            class="form-control-file border"  placeholder="Enter Company Contact Number"value="{{ old('company_phone') }}"
+                                            class="form-control-file border"
+                                            placeholder="Enter Company Contact Number"value="{{ old('company_phone') }}"
                                             name="company_phone">
                                         @error('company_phone')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
 
                                     </div>
-                                   
+
                                     <div class="form-group">
                                         <label for="company_details">About Company <span
                                                 class="text-danger">*</span></label>
-                                        <textarea name="company_details" class="form-control" id="" cols="30"  rows="5" placeholder="Enter Company Short Intro"></textarea>
+                                        <textarea name="company_details" class="form-control" id="" cols="30" rows="5"
+                                            placeholder="Enter Company Short Intro"></textarea>
                                         @error('company_details')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="company_logo">Company Logo <small class="">(optional)</small></label>
+                                        <label for="company_logo">Company Logo <small
+                                                class="">(optional)</small></label>
 
                                         <input type="file" id="file-ip-1" accept="image/*"
                                             class="form-control-file border" value="{{ old('company_logo') }}"
@@ -159,7 +189,7 @@
                         </div>
 
                     </div>
-                    
+
                 </form>
             </div>
         </section>

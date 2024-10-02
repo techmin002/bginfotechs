@@ -43,7 +43,7 @@ class ClientController extends Controller
             'name'     => 'required|string|max:255',
             'email'    => 'required|email|max:255|unique:users,email',
             'password' => 'required|string|min:8|max:255|confirmed',
-            'phone_no'     => 'required|min:10|max:10',
+            'phone_no'     => 'required|min:8|max:15',
             'company_name'     => 'required',
             
         ]);
@@ -111,7 +111,7 @@ class ClientController extends Controller
         $request->validate([
             'name'     => 'required|string|max:255',
             'email'    => 'required|email|max:255',
-            'phone_no'     => 'required|min:10|max:10',
+            'phone_no'     => 'required|min:8|max:15',
             'company_name'     => 'required',
             
         ]);
