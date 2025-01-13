@@ -83,6 +83,15 @@
         </div>
         <div class="header-button">
             <a class="btn tj-black-btn" href="{{ route('contact.index') }}">Contact Us</a>
+            @auth
+            @php($role = auth()->user()->role_id)
+            @if($role == 7)
+            <a href="{{ route('sutdents.dashboard') }}" class="btn btn-outline-info rounded"><span>Dashbaord</span></a>
+            @endif
+               @else 
+            
+            <a href="{{ route('student.login') }}" class="btn btn-outline-info rounded"><span>Student Login</span></a>
+            @endauth
         </div>
     </div>
     <!-- end: Mobile Menu -->
