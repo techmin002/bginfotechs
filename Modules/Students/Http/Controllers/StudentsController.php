@@ -151,10 +151,16 @@ class StudentsController extends Controller
             $request->image->move(public_path('upload/images/users'), $imageName);
 
         }
+        if($request->password)
+        {
+            $password = Hash::make($request->password);
+        }else{
+           $password= $user->password;
+        }
         $user->update([
             'name'     => $request->name,
             'email'    => $request->email,
-            'password' => Hash::make($request->password),
+            'password' => $password,
             'image' => $imageName
         ]);
         return redirect()->route('students.index')->with('success', 'Student Updated Successfully');

@@ -61,7 +61,7 @@
                                                 <label>Password</label>
                                                 <div class="input-group mb-3" id="show_hide_password">
                                                     <input type="password" class="form-control" placeholder="Password"
-                                                        aria-label="password" name="password" required
+                                                        aria-label="password" name="password"
                                                         aria-describedby="button-addon2">
                                                     <div class="input-group-append">
                                                         <button class="btn btn-outline-secondary" type="button"
@@ -207,7 +207,7 @@
                                                 class="text-danger">*</span></label>
                                         <input type="date" id="file-ip-1" class="form-control-file border"
                                             value="{{ $student->complete_date }}" name="complete_date"
-                                            min="{{ date('Y-m-d') }}">
+                                            >
                                         @error('complete_date')
                                             <p style="color: red">{{ $message }}</p>
                                         @enderror

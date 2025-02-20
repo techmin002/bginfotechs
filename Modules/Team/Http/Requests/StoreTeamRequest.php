@@ -20,7 +20,7 @@ class StoreTeamRequest extends FormRequest
             'phone' => ['required'],
             'designation' => ['required'],
             'introduction' => ['required'],
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5048',
         ];
     }
 

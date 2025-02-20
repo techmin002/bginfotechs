@@ -20,7 +20,7 @@ class UpdateTeamRequest extends FormRequest
             'phone' => ['required'],
             'designation' => ['required'],
             'introduction' => ['required'],
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:5048',
         ];
     }
 

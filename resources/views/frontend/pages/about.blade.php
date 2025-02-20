@@ -125,7 +125,7 @@
                                 <p>
                                     At BG Infotechs, we pride ourselves on our commitment to excellence and our passion for technology. We believe in fostering a collaborative environment where creativity and innovation can flourish, enabling us to deliver exceptional results for our clients.
                                 </p>
-                                
+
                             </div>
                             <div class="about-button d-flex">
                                 <a href="{{ route('aboutus') }}" class="tj-secondary-btn btn-border"><span>Read
@@ -199,7 +199,7 @@
                 </div>
                 @endforeach
                 <div class="team-button text-center">
-                    <a href="contact.html" class="tj-secondary-btn btn-border"><span>View More</span></a>
+                    <a href="{{ route('aboutus') }}" class="tj-secondary-btn btn-border"><span>View More</span></a>
                 </div>
             </div>
         </div>
