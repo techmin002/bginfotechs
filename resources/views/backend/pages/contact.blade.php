@@ -27,17 +27,17 @@
           </div>
         </div><!-- /.container-fluid -->
       </section>
-  
+
       <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
-             
+
               <!-- /.card -->
-  
+
               <div class="card">
-                
+
                 <!-- /.card-header -->
                 <div class="card-body">
                   <table id="example1" class="table table-bordered table-striped">
@@ -48,6 +48,7 @@
                       <th class="text-center">Contact</th>
                       <th class="text-center">Email</th>
                       <th class="text-center">service</th>
+                      <th class="text-center">Date</th>
                       <th class="text-center">Message</th>
                       <th class="text-center">Action</th>
                     </tr>
@@ -89,6 +90,7 @@
                       <th class="text-center">Contact</th>
                       <th class="text-center">Email</th>
                       <th class="text-center">service</th>
+                      <th class="text-center">Date</th>
                       <th class="text-center">Message</th>
                       <th class="text-center">Action</th>
                     </tr>
@@ -107,5 +109,5 @@
       </section>
       <!-- /.content -->
     </div>
- 
+
 @endsection
