@@ -88,8 +88,8 @@
             @if($role == 7)
             <a href="{{ route('sutdents.dashboard') }}" class="btn btn-outline-info rounded"><span>Dashbaord</span></a>
             @endif
-               @else 
-            
+               @else
+
             <a href="{{ route('student.login') }}" class="btn btn-outline-info rounded"><span>Student Login</span></a>
             @endauth
         </div>
@@ -126,12 +126,16 @@
                                     <li class="has-dropdown">
                                         <a href="{{ route('services.list') }}">Services</a>
                                         <ul class="sub-menu">
+                                            <li>
+                                                <a href="{{ route('social.media.marketing') }}">Social Media Marketing</a>
+                                            </li>
                                             @foreach($category as $cat)
-                                           
+
                                             <li>
                                             <a href="{{ route('service.show',$cat->slug) }}">{{ $cat->title }}</a>
                                         </li>
                                             @endforeach
+
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
@@ -144,21 +148,21 @@
                                     </li>
                                     <li class="">
                                         <a href="{{ route('blog.all') }}" title="Blog">Blog</a>
-                                        
+
                                     </li>
                                     <li><a href="{{ route('contact.index') }}" title="Contact">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="header-button d-none d-lg-block">
-                            
+
                             @auth
                             @php($role = auth()->user()->role_id)
                             @if($role == 7)
                             <a href="{{ route('sutdents.dashboard') }}" class="btn btn-outline-info rounded"><span>Dashbaord</span></a>
                             @endif
-                               @else 
-                            
+                               @else
+
                             <a href="{{ route('student.login') }}" class="btn btn-outline-info rounded"><span>Student Login</span></a>
                             @endauth
                         </div>

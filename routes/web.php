@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,9 @@ Route::get('/blogs/all', [FrontendController::class, 'blogs'])->name('blog.all')
 Route::get('/blog/details/{slug}', [FrontendController::class, 'blogsDetails'])->name('blog.details');
 Route::get('/contact', [FrontendController::class, 'contactUs'])->name('contact.index');
 Route::post('frontend/contact/store', [FrontendController::class, 'contactStore'])->name('frontend.contactus.store');
+Route::get('social-media-marketing', [SocialMediaController::class, 'socialMediaMarketing'])->name('social.media.marketing');
+Route::post('social-media-marketing-store', [SocialMediaController::class, 'socialMediaMarketingStore'])->name('social.media.marketing.store');
+
 
 Route::get('/service/{slug}', [FrontendController::class, 'serviceShow'])->name('service.show');
 

@@ -17,7 +17,7 @@
                             <p class="">
                                 {!! $company->introduction !!}
                             </p>
-                            
+
                             <div class="footer-share">
                                 <ul class="dot-style">
                                     <li>
@@ -42,7 +42,7 @@
                 @php
                             $category=Modules\Service\Entities\ServiceCategory::all();
                     @endphp
-                
+
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="footer-widget footer1-col-3">
                         <h4 class="footer_title">Services</h4>
@@ -52,7 +52,7 @@
                                      @foreach($category as $cat)
                                     <li><a href="{{ route('service.show',$cat->slug) }}" title="{{ $cat->title }}">{{ $cat->title }}</a></li>
                                     @endforeach
-                                   
+
                                 </ul>
                             </div>
                         </div>
@@ -75,12 +75,13 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="footer-widget footer1-col-2">
-                        <h4 class="footer_title">Products</h4>
+                        <h4 class="footer_title">Branches</h4>
                         <div class="widget_nav_menu">
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="https://hamrobhet.com/">Hamrobhet</a></li>
-                                    
+                                    <li><a href="#">BG Infotechs Dhangadhi</a></li>
+                                    <li><a href="#">BG Infotechs Kathmandu</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -102,11 +103,15 @@
                                     </li>
                                     <li>
                                         <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
-                                        <a href="https://bginfotechs.com/">Taranagar 5, Dhangadhi, Kailali, Nepal</a>
+                                        <a href="https://bginfotechs.com/">Dhangadhi-5,  Kailali, Nepal</a>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
+                                        <a href="https://bginfotechs.com/">Kathmandu-6, Chabhill, Nepal</a>
                                     </li>
                                     <li>
                                         <span><i class="fa-solid fa-phone-volume"></i></span>
-                                        <a href="tel:+977 984 225 111">+ 091 590935</a>
+                                        <a href="tel:+977 984 225 111">Dhangadhi: +091 590935, 9842251119, 9805672203  Kathmandu : +01-5925935, 9767692420, 9801655989</a>
                                     </li>
                                 </ul>
                             </div>
@@ -120,8 +125,8 @@
     <section>
         <div class="footer-bottom">
             <div class="container text-center">
-               <u><h3 style="color: white;">Our Partner</h3></u> 
-                           <a href="https://gravityweb.in/" target="_blank"><img style="height:50px" alt="bg infotechs logo" title="bginfotechs logo" src="{{ asset('frontend/images/logo/gravity_logo.webp') }}" title="Gravity Web"></a> 
+               <u><h3 style="color: white;">Our Partner</h3></u>
+                           <a href="https://gravityweb.in/" target="_blank"><img style="height:50px" alt="bg infotechs logo" title="bginfotechs logo" src="{{ asset('frontend/images/logo/gravity_logo.webp') }}" title="Gravity Web"></a>
             </div>
         </div>
     </section>

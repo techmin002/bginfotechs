@@ -10,16 +10,16 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex bg-white">
         <div class="image">
           @php
             $profile = \Modules\Setting\Entities\CompanyProfile::first();
           @endphp
-          <img src="{{ asset('upload/images/settings/'.$profile->logo) }}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ asset('upload/images/settings/'.$profile->logo) }}" class="w-100 mt-2" alt="User Image">
         </div>
-        <div class="info">
+        {{-- <div class="info">
           <a href="{{ route('home') }}" class="d-block" style="text-decoration: none;">{{ $profile->company_name }}</a>
-        </div>
+        </div> --}}
       </div>
 
       <!-- SidebarSearch Form -->
@@ -44,11 +44,11 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                
+
               </p>
             </a>
           </li>
-        
+
           @can('access_user_management')
           <li class="nav-item {{ request()->routeIs('users.*','roles.*') ? 'menu-is-opening menu-open' : '' }}">
             <a href="#" class="nav-link" {{ request()->routeIs('users.*','roles.*') ? 'active' : '' }}>
@@ -86,7 +86,7 @@
             </ul>
           </li>
           @endcan
-          
+
           @can('access_user_management')
           <li class="nav-item {{ request()->routeIs('projects.*','roles.*') ? 'menu-is-opening menu-open' : '' }}">
             <a href="#" class="nav-link" {{ request()->routeIs('projects.*','roles.*') ? 'active' : '' }}>
@@ -110,7 +110,7 @@
                   <p>All Projects</p>
                 </a>
               </li>
-              
+
             </ul>
           </li>
           @endcan
@@ -211,7 +211,7 @@
                   <p>Expenses</p>
                 </a>
               </li>
-              
+
             </ul>
           </li>
           @endcan

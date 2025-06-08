@@ -17,7 +17,7 @@ class FrontendController extends Controller
     {
         $data['blogs'] = Blog::all();
         $data['faqs'] = Faq::all();
-        
+
         $data['categories'] = ServiceCategory::where('status','on')->get();
         return view('frontend.welcome', compact('data'));
     }
@@ -61,18 +61,22 @@ class FrontendController extends Controller
             'Name' => 'required|string',
             'conEmail' => 'required|email',
             'phone' => 'required|integer',
-            'conMessage' => 'required', 
-            'service' => 'required',    
+            'conMessage' => 'required',
+            'service' => 'required',
         ]);
 
         $contact = Contact::create([
             'name' => $validatedData['Name'],
             'email' => $validatedData['conEmail'],
             'contact' => $validatedData['phone'],
-            'message' => $validatedData['conMessage'], 
+            'message' => $validatedData['conMessage'],
             'service_id' => $validatedData['service'],
         ]);
 
         return redirect()->back()->with('success','Thank you for contacting us. Your query submited successfully, Will Contact you soon.');
+    }
+    public function socialMediaMarketing()
+    {
+        return view('frontend.pages.social-media-marketing');
     }
 }

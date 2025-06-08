@@ -69,19 +69,12 @@
                                                         <label class="custom-control-label" for="access_user_management">Access</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                               id="edit_own_profile" name="permissions[]"
-                                                               value="edit_own_profile" {{ old('edit_own_profile') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_own_profile">Own Profile</label>
-                                                    </div>
-                                                </div>
+                                               
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- subscriber -->
                                 {{-- <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
