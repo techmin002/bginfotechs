@@ -25,6 +25,7 @@ class SocialMediaController extends Controller
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'phone' => $validatedData['phone'],
+            'package' => $request['package'] ?? null,
             'no_graphics' => $request['no_graphics'] ?? null,
             'no_videos' => $request['no_videos'] ?? null,
             'business_category' => $request['business_category'] ?? null,
@@ -32,5 +33,11 @@ class SocialMediaController extends Controller
         ]);
 
         return redirect()->back()->with('success','Your Social Media Marketing request submited successfully, Our Team will Contact you soon.');
+    }
+    public function smmRequest()
+    {
+
+        $smms = SocialMediaRequest::all();
+        return view('backend.pages.smm-request', compact('smms'));
     }
 }

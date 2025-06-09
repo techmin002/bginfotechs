@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\SocialMediaController;
 use Illuminate\Support\Facades\Route;
 use Modules\Setting\Http\Controllers\CompanyProfileController;
 use Modules\Setting\Http\Controllers\EventController;
@@ -28,4 +29,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('whyus/store',[CompanyProfileController::class,'WhyUsStore'])->name('whyus.store');
     Route::put('whyus/update/{id}',[CompanyProfileController::class,'WhyUsUpdate'])->name('whyus.update');
     Route::get('whyus/delete/{id}',[CompanyProfileController::class,'WhyUsDelete'])->name('whyus.delete');
+    Route::get('social-media-request',[SocialMediaController::class,'smmRequest'])->name('smmrequest.index');
+
 });

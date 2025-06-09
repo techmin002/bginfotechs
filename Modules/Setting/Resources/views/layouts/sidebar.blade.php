@@ -348,6 +348,12 @@
               </a>
             </li>
             <li class="nav-item">
+                <a href="{{ route('smmrequest.index') }}" class="nav-link {{ request()->routeIs('smmrequest.index') ? 'active' : '' }}">
+                  <i class="far fa-calendar nav-icon"></i>
+                  <p>SMM Request</p>
+                </a>
+              </li>
+            <li class="nav-item">
               <a href="{{ route('galleries.index') }}" class="nav-link {{ request()->routeIs('galleries.index') ? 'active' : '' }}">
                 <i class="far fa-image nav-icon"></i>
                 <p>Gallery</p>
